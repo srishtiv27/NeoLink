@@ -1,8 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import NeonatalImage from "../images/neonatal-care-img.png";
-import NeonatalTips1 from "../images/neonatal-tips-1.png";
-import NeonatalTips2 from "../images/neonatal-tips-2.png";
+import VolunteerImage from "../images/volunteer-page-img.png";
 
 export default function NeonatalCare() {
     return (
@@ -25,6 +23,17 @@ export default function NeonatalCare() {
                     </div>
                     <div className="volunteer--card">
                         <p>Use your skills to improve neonatal health outcomes</p>
+                    </div>
+                </div>
+                <div className="volunteer--interested">
+                    <img src={VolunteerImage} className="neonatal--img"></img>
+                    <div className="volunteer--interested--content">
+                        <p>If you're interested in volunteering with Neolink, please reach out to us through our 
+                            contact page or email us directly, or by filling out the form given below. 
+                        </p>
+                        <p>Let us know how you would like to contribute and what skills or expertise you can bring 
+                            to the table! 
+                        </p>
                     </div>
                 </div>
             </div>

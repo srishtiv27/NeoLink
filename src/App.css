@@ -332,3 +332,21 @@ input {
 .lightblue {
   background-color: #D0EAFE;
 }
+
+.volunteer--interested {
+  margin-top: 50px;
+  margin-left: 120px;
+  display: flex;
+}
+
+.volunteer--interested--content {
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-right: 100px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 50px;
+  color: black;
+}
