@@ -93,7 +93,7 @@ nav {
   margin-right: 7px;
 }
 
-.landing--main{
+.landing-main{
   /* padding: 57px 27px; */
   display: flex;
   text-align: left;
@@ -102,12 +102,12 @@ nav {
   /* color: white; */
 }
 
-.main--content {
+.landing-main--content {
   margin-left: 2.143%;
 }
 
 
-.main--title {
+.landing-main--title {
   /* margin: 0; */
   margin-top: 80px;
   margin-left: 0;
@@ -121,7 +121,7 @@ nav {
   color: black;
 }
 
-.main--text {
+.landing-main--text {
   margin-top: 46px;
   max-width: 650px;
   font-family: 'Lato';
@@ -132,10 +132,11 @@ nav {
   color: black;
 }
 
-.landing--img {
+.landing-main--img {
   height: 94%;
   margin-left: 7.5%;
 }
+
 .healthcare--main{
   text-align: center;
   margin-top: 80px;

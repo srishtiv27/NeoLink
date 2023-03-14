@@ -6,11 +6,11 @@ import RegisterHealthcare from "./RegisterHealthcare";
 
 export default function LandingContent() {
     return (
-        <main className="landing--main">
+        <main className="landing-main">
             <Navbar />
-            <div className="main--content">
-                <h1 className="main--title">Timely care for tiny lives</h1>
-                <p className="main--text">
+            <div className="landing-main--content">
+                <h1 className="landing-main--title">Timely care for tiny lives</h1>
+                <p className="landing-main--text">
                     NeoLink is committed to improving the care of sick newborns.
                     <br />
                     Join us in our mission to give newborns a fighting chance and
@@ -23,7 +23,7 @@ export default function LandingContent() {
                 </div>
             </div>
             <div>
-                <img src={LandingImage} className="landing--img"></img>
+                <img src={LandingImage} className="landing-main--img"></img>
             </div>
         </main>
     );
