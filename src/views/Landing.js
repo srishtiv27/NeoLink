@@ -2,7 +2,6 @@ import React from "react";
 import Button from "../components/Button";
 import Navbar from "../components/Navbar";
 import LandingImage from "../images/landing-page-img.png";
-import RegisterHealthcare from "./RegisterHealthcare";
 
 export default function LandingContent() {
     return (

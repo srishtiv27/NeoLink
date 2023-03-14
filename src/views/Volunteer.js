@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import VolunteerImage from "../images/volunteer-page-img.png";
+import VolunteerButton from "../components/VolunteerButton";
 
 export default function NeonatalCare() {
     return (
@@ -31,9 +32,11 @@ export default function NeonatalCare() {
                         <p>If you're interested in volunteering with Neolink, please reach out to us through our 
                             contact page or email us directly, or by filling out the form given below. 
                         </p>
+                        {/* <br/> */}
                         <p>Let us know how you would like to contribute and what skills or expertise you can bring 
                             to the table! 
                         </p>
+                        <VolunteerButton href="/" text="VOLUNTEER" />
                     </div>
                 </div>
             </div>
