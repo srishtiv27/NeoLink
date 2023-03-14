@@ -47,6 +47,10 @@ body {
   font-family: Inter, sans-serif;
 }
 
+main {
+  overflow-y: hidden;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -79,7 +83,7 @@ nav {
 .nav--item {
   color: #F6F6F6;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.3rem;
   font-family: 'Lato';
   margin-right: 35px;
 }
@@ -94,12 +98,12 @@ main {
   display: flex;
   text-align: left;
   margin-top: 150px;
-  margin-left: 70px;
+  margin-left: 5%;
   /* color: white; */
 }
 
 .main--content {
-  margin-left: 30px;
+  margin-left: 2.143%;
 }
 
 
@@ -129,6 +133,6 @@ main {
 }
 
 .landing--img {
-  height: 550px;
-  margin-left: 70px;
+  height: 94%;
+  margin-left: 7.5%;
 }
