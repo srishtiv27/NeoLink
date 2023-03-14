@@ -181,3 +181,34 @@ form{
   display: inline-block;
   vertical-align: middle;
 }
+label{
+  text-align: right;
+  margin-right: 90px;
+  margin-top: 50px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+  color: black;
+}
+input{
+  width: 400px;
+  height: 50px;
+  border-radius: 30px;
+  border-color: transparent;
+  background-color: #f6f6f6; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+/* input:focus{
+  border-color: #d0eafe;
+  outline: none;
+} */
+.form-field{
+  text-align: right;
+}
+.submit-button{
+  margin: 200px;
+}

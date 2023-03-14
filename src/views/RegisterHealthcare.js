@@ -13,25 +13,57 @@ export default function RegisterHealthcare() {
                     To find the best SNCU for your newborns' needs, please provide us with the following details!
                 </p>
             </div>
-                <form>
-                    <div className="healthcare--form">
-                        <label>Enter your name:
-                            <input type="text" />
+            <form>
+                <div className="healthcare--form">
+                    <div className="form-field">
+                        <label>Administrator name
                         </label>
-                        <label>Enter your name:
-                            <input type="text" />
-                        </label>
-                        {/* <label>Enter your name:
-                            <input type="text" />
-                        </label>
-                        <label>Enter your name:
-                            <input type="text" />
-                        </label>
-                        <label>Enter your name:
-                            <input type="text" />
-                        </label>  */}
+                        <input type="text" />
                     </div>
-                </form>
+                    <div className="form-field">
+                        <label>Contact number
+                        </label>
+                        <input type="text" />
+                    </div>
+                    <div className="form-field">
+                        <label>Email ID
+                        </label>
+                        <input type="text" />
+                    </div>
+                    <div className="form-field">
+                        <label>Organization name
+                        </label>
+                        <input type="text" />
+                    </div>
+                    <div className="form-field">
+                        <label>Address
+                        </label>
+                        <input type="text" />
+                    </div>
+                    <div className="form-field">
+                        <label>City
+                        </label>
+                        <input type="text" />
+                    </div>
+                    <div className="form-field">
+                        <label>State
+                        </label>
+                        <input type="text" />
+                    </div>
+                    <div className="form-field">
+                        <label>Pincode
+                        </label>
+                        <input type="text" />
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div classname="submit-button">
+                    <Button href="/register-healthcare" text="SUBMIT" />
+                </div>
+                <br/>
+                <br/>
+            </form>
         </main>
     );
 }
