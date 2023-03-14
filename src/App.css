@@ -94,6 +94,8 @@ nav {
   margin-right: 7px;
 }
 
+/* Landing */
+
 .landing-main {
   /* padding: 57px 27px; */
   display: flex;
@@ -137,6 +139,8 @@ nav {
   height: 94%;
   margin-left: 7.5%;
 }
+
+/* Register Healthcare Provider */
 
 .healthcare--main {
   text-align: center;
@@ -307,4 +311,24 @@ input {
   font-size: 21px;
   line-height: 50px;
   color: black;
+}
+
+.volunteer--cards {
+  margin-left: 100px;
+  display: flex;
+}
+
+.volunteer--card {
+  background-color: #F5F5DA;
+  border-radius: 30px;
+  height: 140px;
+  width: 320px;
+  padding: 43px 20px;
+  margin: 20px 40px;
+  text-align: center;
+  color: #10152C;
+}
+
+.lightblue {
+  background-color: #D0EAFE;
 }

@@ -16,6 +16,17 @@ export default function NeonatalCare() {
                     the opportunity to use your skills and expertise to make a real impact in the lives of sick newborns
                     and their families. </p>
                 </div>
+                <div className="volunteer--cards">
+                    <div className="volunteer--card">
+                        <p> Make a real impact in the lives of sick newborns and their families.</p>
+                    </div>
+                    <div className="volunteer--card lightblue">
+                        <p>Work with a dedicated team of professionals</p>
+                    </div>
+                    <div className="volunteer--card">
+                        <p>Use your skills to improve neonatal health outcomes</p>
+                    </div>
+                </div>
             </div>
         </div>
     )
