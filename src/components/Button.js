@@ -23,6 +23,6 @@ const vars = {
 
 export default function Button(props) {
     return  (
-        <CButton style={vars} shape="rounded-pill">{props.text}</CButton>
+        <CButton style={vars} href={props.href} shape="rounded-pill">{props.text}</CButton>
     )
 }
