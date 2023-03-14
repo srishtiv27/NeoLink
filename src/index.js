@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import RegisterHealthcare from './views/RegisterHealthcare';
+import NeonatalCare from './views/NeonatalCare';
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 
 const router = createBrowserRouter([
   {
@@ -18,6 +21,10 @@ const router = createBrowserRouter([
     path: "/register-healthcare",
     element: <RegisterHealthcare/>,
   },
+  {
+    path: "/neonatal-care",
+    element: <NeonatalCare />
+  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
