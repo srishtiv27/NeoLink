@@ -44,7 +44,7 @@
 
 body {
   margin: 0;
-  font-family: Inter, sans-serif;
+  font-family: 'Lato','sans serif';
 }
 
 main {
@@ -93,7 +93,7 @@ nav {
   margin-right: 7px;
 }
 
-main {
+.landing--main{
   /* padding: 57px 27px; */
   display: flex;
   text-align: left;
@@ -135,4 +135,43 @@ main {
 .landing--img {
   height: 94%;
   margin-left: 7.5%;
+}
+.healthcare--main{
+  text-align: center;
+  margin-top: 80px;
+}
+.healthcare--title {
+  /* margin: 0; */
+  margin-top: 80px;
+  margin-left: 0; 
+  text-align: center;
+  font-size: 39px;
+  letter-spacing: -0.05em;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 62px;
+  color: black;
+}
+
+.healthcare--subtitle {
+  /* margin-top: 46px;
+  max-width: 650px; */
+  font-family: 'Lato';
+  font-style: normal;
+  text-align: center;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 50px;
+  color: black;
+  margin-top: 30px;
+}
+.healthcare--form{
+  text-align:center; 
+  vertical-align:middle;
+}
+form{
+  display: inline-block;
+  vertical-align: middle;
 }

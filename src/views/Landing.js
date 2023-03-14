@@ -6,7 +6,7 @@ import RegisterHealthcare from "./RegisterHealthcare";
 
 export default function LandingContent() {
     return (
-        <main>
+        <main className="landing--main">
             <Navbar />
             <div className="main--content">
                 <h1 className="main--title">Timely care for tiny lives</h1>
