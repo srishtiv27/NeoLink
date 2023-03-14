@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import RegisterHealthcare from './views/RegisterHealthcare';
 import NeonatalCare from './views/NeonatalCare';
+import Volunteer from './views/Volunteer';
 
 import {
   createBrowserRouter,
@@ -18,13 +19,17 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
+    path: "/neonatal-care",
+    element: <NeonatalCare />
+  },
+  {
+    path: "/volunteer",
+    element: <Volunteer/>,
+  },
+  {
     path: "/register-healthcare",
     element: <RegisterHealthcare/>,
   },
-  {
-    path: "/neonatal-care",
-    element: <NeonatalCare />
-  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

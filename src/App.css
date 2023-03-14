@@ -44,12 +44,14 @@
 
 body {
   margin: 0;
-  font-family: 'Lato','sans serif';
+  font-family: 'Lato', 'sans serif';
 }
 
 main {
   overflow-y: hidden;
 }
+
+/* Navbar */
 
 nav {
   display: flex;
@@ -92,7 +94,7 @@ nav {
   margin-right: 7px;
 }
 
-.landing-main{
+.landing-main {
   /* padding: 57px 27px; */
   display: flex;
   text-align: left;
@@ -136,7 +138,7 @@ nav {
   margin-left: 7.5%;
 }
 
-.healthcare--main{
+.healthcare--main {
   text-align: center;
   margin-top: 80px;
 }
@@ -144,7 +146,7 @@ nav {
 .healthcare--title {
   /* margin: 0; */
   margin-top: 80px;
-  margin-left: 0; 
+  margin-left: 0;
   text-align: center;
   font-size: 39px;
   letter-spacing: -0.05em;
@@ -176,11 +178,12 @@ nav {
   /* vertical-align:middle; */
 }
 
-form{
+form {
   display: inline-block;
   vertical-align: middle;
 }
-label{
+
+label {
   text-align: right;
   margin-right: 90px;
   margin-top: 50px;
@@ -191,16 +194,18 @@ label{
   line-height: 50px;
   color: black;
 }
-input{
+
+input {
   width: 400px;
   height: 50px;
   border-radius: 30px;
   border-color: transparent;
-  background-color: #f6f6f6; 
+  background-color: #f6f6f6;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
 }
+
 /* input:focus{
   border-color: #d0eafe;
   outline: none;
@@ -212,6 +217,8 @@ input{
 .submit-button {
   margin: 200px;
 }
+
+/* Neonatal care */
 
 .neonatal--main {
   text-align: center;
@@ -231,7 +238,6 @@ input{
   justify-content: space-evenly;
   text-align: left;
   margin-top: 90px;
-  
 }
 
 .neonatal--img {
@@ -260,7 +266,7 @@ input{
   border-radius: 30px;
   height: 80px;
   width: 650px;
-  padding: 13px 20px; 
+  padding: 13px 20px;
   text-align: center;
   color: #10152C;
 }
@@ -269,3 +275,36 @@ input{
   background-color: #D0EAFE;
 }
 
+/* Volunteer */
+
+.volunteer--main {
+  text-align: center;
+  margin-bottom: 150px;
+  margin-top: 150px;
+}
+
+.volunteer--title {
+  font-family: 'Lato';
+  font-size: 39px;
+  color: black;
+  font-weight: 800;
+}
+
+.volunteer--content {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.volunteer--text {
+  text-align: center;
+  margin-right: 90px;
+  max-width: 850px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 50px;
+  color: black;
+}
