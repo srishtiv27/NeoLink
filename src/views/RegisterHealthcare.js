@@ -13,25 +13,25 @@ export default function RegisterHealthcare() {
                     To find the best SNCU for your newborns' needs, please provide us with the following details!
                 </p>
             </div>
-            <div className="healthcare--form">
                 <form>
-                    <label>Enter your name:
-                        <input type="text" />
-                    </label>
-                    <label>Enter your name:
-                        <input type="text" />
-                    </label>
-                    <label>Enter your name:
-                        <input type="text" />
-                    </label>
-                    <label>Enter your name:
-                        <input type="text" />
-                    </label>
-                    <label>Enter your name:
-                        <input type="text" />
-                    </label>
+                    <div className="healthcare--form">
+                        <label>Enter your name:
+                            <input type="text" />
+                        </label>
+                        <label>Enter your name:
+                            <input type="text" />
+                        </label>
+                        {/* <label>Enter your name:
+                            <input type="text" />
+                        </label>
+                        <label>Enter your name:
+                            <input type="text" />
+                        </label>
+                        <label>Enter your name:
+                            <input type="text" />
+                        </label>  */}
+                    </div>
                 </form>
-            </div>
         </main>
     );
 }

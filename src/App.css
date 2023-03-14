@@ -141,6 +141,7 @@ nav {
   text-align: center;
   margin-top: 80px;
 }
+
 .healthcare--title {
   /* margin: 0; */
   margin-top: 80px;
@@ -168,10 +169,14 @@ nav {
   color: black;
   margin-top: 30px;
 }
-.healthcare--form{
-  text-align:center; 
-  vertical-align:middle;
+
+.healthcare--form {
+  display: flex;
+  flex-direction: column;
+  /* text-align:center;  */
+  /* vertical-align:middle; */
 }
+
 form{
   display: inline-block;
   vertical-align: middle;
