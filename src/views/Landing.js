@@ -1,10 +1,12 @@
 import React from 'react'
-import Button from './Button'
+import Button from '../components/Button'
+import Navbar from '../components/Navbar'
 import LandingImage from '../images/landing-page-img.png'
 
 export default function LandingContent() {
     return (
         <main>
+            <Navbar/>
             <div className="main--content">
                 <h1 className="main--title">Timely care for tiny lives</h1>
                 <p className="main--text">NeoLink is committed to improving the care of sick newborns.
