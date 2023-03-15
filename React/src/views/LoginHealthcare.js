@@ -51,14 +51,14 @@ export default function LoginHealthcare() {
                 <div className="healthcare--form">
 
                     <div className="form-field">
-                        <label>Email ID
+                        <label className="register-label">Email ID
                         </label>
-                        <input type="email" name="adminemail" onChange={(e) => setadminemail(e.target.value)} />
+                        <input className="register-input"  type="email" name="adminemail" onChange={(e) => setadminemail(e.target.value)} />
                     </div>
                     <div className="form-field">
-                        <label>Password
+                        <label className="register-label">Password
                         </label>
-                        <input type="password" name="password" onChange={(e) => setpassword(e.target.value)} />
+                        <input className="register-input" type="password" name="password" onChange={(e) => setpassword(e.target.value)} />
                     </div>
                 </div>
                 <br />

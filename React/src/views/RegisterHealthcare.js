@@ -64,54 +64,54 @@ export default function RegisterHealthcare() {
             <form onSubmit={handleSubmit}>
                 <div className="healthcare--form">
                     <div className="form-field">
-                        <label>Administrator name
+                        <label className="register-label">Administrator name
                         </label>
-                        <input type="text" name="adminname" onChange={(e) => setadminname(e.target.value)} />
+                        <input className="register-input" type="text" name="adminname" onChange={(e) => setadminname(e.target.value)} />
                     </div>
                     <div className="form-field">
-                        <label>Contact number
+                        <label className="register-label">Contact number
                         </label>
-                        <input type="number" name="admincontact" onChange={(e) => setadmincontact(e.target.value)} />
+                        <input className="register-input" type="number" name="admincontact" onChange={(e) => setadmincontact(e.target.value)} />
                     </div>
                     <div className="form-field">
-                        <label>Email ID
+                        <label className="register-label">Email ID
                         </label>
-                        <input type="email" name="adminemail" onChange={(e) => setadminemail(e.target.value)} />
+                        <input className="register-input"  type="email" name="adminemail" onChange={(e) => setadminemail(e.target.value)} />
                     </div>
                     <div className="form-field">
-                        <label>Organization name
+                        <label className="register-label">Organization name
                         </label>
-                        <input type="text" name="orgname" onChange={(e) => setorgname(e.target.value)} />
+                        <input className="register-input"  type="text" name="orgname" onChange={(e) => setorgname(e.target.value)} />
                     </div>
                     <div className="form-field">
-                        <label>Address
+                        <label className="register-label">Address
                         </label>
-                        <input type="text" name="address" onChange={(e) => setaddress(e.target.value)} />
+                        <input className="register-input"  type="text" name="address" onChange={(e) => setaddress(e.target.value)} />
                     </div>
                     <div className="form-field">
-                        <label>City
+                        <label className="register-label">City
                         </label>
-                        <input type="text" name="city" onChange={(e) => setcity(e.target.value)} />
+                        <input className="register-input"  type="text" name="city" onChange={(e) => setcity(e.target.value)} />
                     </div>
                     <div className="form-field">
-                        <label>State
+                        <label className="register-label">State
                         </label>
-                        <input type="text" name="state" onChange={(e) => setstate(e.target.value)} />
+                        <input className="register-input"  type="text" name="state" onChange={(e) => setstate(e.target.value)} />
                     </div>
                     <div className="form-field">
-                        <label>Pincode
+                        <label className="register-label">Pincode
                         </label>
-                        <input type="number" name="pincode" onChange={(e) => setpincode(e.target.value)} />
+                        <input className="register-input"  type="number" name="pincode" onChange={(e) => setpincode(e.target.value)} />
                     </div>
                     <div className="form-field">
-                        <label>Password
+                        <label className="register-label">Password
                         </label>
-                        <input type="password" name="password" onChange={(e) => setpassword(e.target.value)} />
+                        <input className="register-input"  type="password" name="password" onChange={(e) => setpassword(e.target.value)} />
                     </div>
                     <div className="form-field">
-                        <label>Confirm Password
+                        <label className="register-label">Confirm Password
                         </label>
-                        <input type="password" name="confirmpassword" onChange={(e) => setconfirmpassword(e.target.value)} />
+                        <input className="register-input"  type="password" name="confirmpassword" onChange={(e) => setconfirmpassword(e.target.value)} />
                     </div>
                 </div>
                 <br />
