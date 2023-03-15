@@ -117,10 +117,7 @@ export default function RegisterHealthcare() {
                 <br />
                 <br />
                 <div className="submit-button">
-                    {/* <Button href="/register-healthcare" type = "submit" text="SUBMIT" /> */}
-                    <button type="submit" className="btn btn-primary">
-                        Sign Up
-                    </button>
+                    <Button type="submit" text="SUBMIT" />
                 </div>
                 <br />
                 <br />

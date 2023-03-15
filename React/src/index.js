@@ -15,14 +15,14 @@ import {
 
 
 const router = createBrowserRouter([
-  // {
-  //   path: "/",
-  //   element: <App/>,
-  // },
   {
     path: "/",
-    element: <ThanksForRegistering/>,
+    element: <App/>,
   },
+  // {
+  //   path: "/",
+  //   element: <ThanksForRegistering/>,
+  // },
   {
     path: "/neonatal-care",
     element: <NeonatalCare />

@@ -17,8 +17,8 @@ export default function LandingContent() {
                     Care Units (SNCUs) and coordinated care.
                 </p>
                 <div className="d-grid gap-2 d-md-block">
-                    <Button href="/register-healthcare" text="SEARCH FOR SNCU" />
-                    <Button href="/register-healthcare" text="REGISTER YOUR SNCU" />
+                    <Button type="button" href="/register-healthcare" text="SEARCH FOR SNCU" />
+                    <Button type="button" href="/register-healthcare" text="REGISTER YOUR SNCU" />
                 </div>
             </div>
             <div>
