@@ -58,8 +58,6 @@ app.post("/register-healthcare", async (req, res) => {
 });
 app.listen(3001, () => {
     console.log("Server Started");
-<<<<<<< HEAD
-=======
 });
 
 app.post("/login-healthcare", async (req, res) => {
@@ -81,5 +79,4 @@ app.post("/login-healthcare", async (req, res) => {
         }
     }
     res.json({ status: "error", error: "Invalid Password" });
->>>>>>> 84efd28f95df8ffef836df284e0e662d9b9b0c4f
 });

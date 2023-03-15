@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 export default function LoginHealthcare() {
     const [adminemail, setadminemail] = useState("");
     const [password, setpassword] = useState("");
-    
+
 
     // const handleSubmit = (e) => {
     //     e.preventDefault();
@@ -36,6 +36,37 @@ export default function LoginHealthcare() {
     //             }
     //         });
     // };
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        console.log(adminemail, password);
+        fetch("http://localhost:3001/login-healthcare", {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+            body: JSON.stringify({
+                adminemail,
+                password,
+            }),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data, "userRegister");
+                if (data.status == "ok") {
+                    alert("Login successful");
+                    // window.localStorage.setItem("token", data.data);
+                    // window.localStorage.setItem("loggedIn", true);
+
+                    // window.location.href = "./userDetails";
+                } else {
+                    alert("Invalid username/password");
+                }
+            });
+    }
 
     return (
         <main className="healthcare--main">
@@ -46,9 +77,9 @@ export default function LoginHealthcare() {
                     To find the best SNCU for your newborns' needs, please provide us with the following details!
                 </p>
             </div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="healthcare--form">
-                    
+
                     <div className="form-field">
                         <label>Email ID
                         </label>
