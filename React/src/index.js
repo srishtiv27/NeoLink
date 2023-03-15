@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import RegisterHealthcare from './views/RegisterHealthcare';
 import NeonatalCare from './views/NeonatalCare';
 import Volunteer from './views/Volunteer';
-import ThanksForRegistering from './views/ThanksForRegistering';
 
 import {
   createBrowserRouter,
@@ -19,10 +18,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <App/>,
   },
-  // {
-  //   path: "/",
-  //   element: <ThanksForRegistering/>,
-  // },
   {
     path: "/neonatal-care",
     element: <NeonatalCare />
@@ -34,10 +29,6 @@ const router = createBrowserRouter([
   {
     path: "/register-healthcare",
     element: <RegisterHealthcare/>,
-  },
-  {
-    path: "/thanks-for-registering",
-    element: <ThanksForRegistering/>,
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
