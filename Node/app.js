@@ -137,3 +137,24 @@ app.post("/register-sncu", async (req, res) => {
         res.send({ status: "error", error: errormessage });
     }
 });
+
+app.post("/login-sncu", async (req, res) => {
+    const { adminemail, password } = req.body;
+
+    const user = await UserSNCU.findOne({ adminemail });
+    if (!user) {
+        return res.json({ error: "User Not found" });
+    }
+    if (password === user.password) {
+        const token = jwt.sign({ email: user.adminemail }, JWT_SECRET, {
+            expiresIn: "150m",
+        });
+
+        if (res.status(201)) {
+            return res.json({ status: "ok", data: token });
+        } else {
+            return res.json({ error: "error" });
+        }
+    }
+    res.json({ status: "error", error: "Invalid Password" });
+});

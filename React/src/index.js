@@ -11,6 +11,8 @@ import LoginHealthcare from './views/LoginHealthcare';
 import SearchForSNCU from './views/SearchForSNCU';
 import LoginRegister from './views/LoginRegister';
 import RegisterSNCU from './views/RegisterSNCU';
+import LoginSNCU from './views/LoginSNCU';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -38,7 +40,7 @@ const router = createBrowserRouter([
     element: <ThanksForRegistering/>,
   },
   {
-    path: "/login",
+    path: "/login-healthcare",
     element: <LoginHealthcare/>,
   },
   {
@@ -52,6 +54,10 @@ const router = createBrowserRouter([
   {
     path: "/register-sncu",
     element: <RegisterSNCU/>,
+  },
+  {
+    path: "/login-sncu",
+    element: <LoginSNCU/>,
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

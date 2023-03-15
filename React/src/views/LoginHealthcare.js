@@ -43,9 +43,9 @@ export default function LoginHealthcare() {
             <Navbar />
             <div>
                 <h1 className="healthcare--title">Login as Healthcare Provider</h1>
-                <p className="healthcare--subtitle">
+                {/* <p className="healthcare--subtitle">
                     To find the best SNCU for your newborns' needs, please provide us with the following details!
-                </p>
+                </p> */}
             </div>
             <form onSubmit={handleSubmit}>
                 <div className="healthcare--form">
