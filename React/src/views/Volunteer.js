@@ -8,7 +8,7 @@ export default function NeonatalCare() {
         <div>
             <Navbar />
             <div className="volunteer--main">
-                <h1 className="volunteer--title">Volunteer with us!</h1>
+                <h1 className="healthcare--title">Volunteer with us!</h1>
                 <div className="volunteer--content">
                     <p className="volunteer--text">Join our community of healthcare professionals, technologists, and
                         data scientists dedicated to improving neonatal health outcomes. As a Neolink volunteer, you'll have
@@ -41,6 +41,5 @@ export default function NeonatalCare() {
                     </div>
                 </div>
             </div>
-        //  </div>
     )
 }

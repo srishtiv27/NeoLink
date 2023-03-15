@@ -335,7 +335,8 @@ form {
 
 .volunteer--interested {
   text-align: center;
-  margin-bottom: 150px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   margin-left: 120px;
   display: flex;
 }

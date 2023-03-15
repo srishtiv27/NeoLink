@@ -9,7 +9,7 @@ export default function NeonatalCare() {
         <div>
             <Navbar />
             <div className="neonatal--main">
-                <h1 className="neonatal--title">Let's learn about Neonatal Care!</h1>
+                <h1 className="healthcare--title">Let's learn about Neonatal Care!</h1>
                 <div className="neonatal--content">
                     <p className="neonatal--text">Neonatal care refers to medical care provided to newborn infants, particularly those
                         who are sick or premature. Neonatal care is crucial during the first 28 days of a
@@ -22,7 +22,7 @@ export default function NeonatalCare() {
                 </div>
             </div>
             <div className="neonatal--main">
-                <h1 className="neonatal--title">Tips for new parents</h1>
+                <h1 className="healthcare--title">Tips for new parents</h1>
                 <div className="neonatal--content">
                     <img src={NeonatalTips1} className="neonatal--img"></img>
                     <div className="neonatal--tips">
