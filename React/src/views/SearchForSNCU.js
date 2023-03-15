@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useReducer, useState } from "react";
 import NavbarHealthcare from "../components/NavbarHealthcare";
 import Button from "../components/Button";
+import SNCUCard from "../components/SNCUCard";
 
 export default function SearchForSNCU() {
     const [adminname, setadminname] = useState("");
@@ -94,6 +95,15 @@ export default function SearchForSNCU() {
                     <Button type="submit" text="SUBMIT" />
                 </div>
             </form>
+            <br/>
+            <br/>
+            <br/>
+            <div className="displaySNCUCards">
+                <SNCUCard name="Max Hospital SNCU" city="New Delhi" specializations="Cardiology and Pediatrics" phone="9780683681" email="nehal@email.com" 
+                          address="A-22, Connaught Place" beds="10" />
+                <SNCUCard name="Max Hospital SNCU" city="New Delhi" specializations="Cardiology and Pediatrics" phone="9780683681" email="nehal@email.com" 
+                          address="A-22, Connaught Place" beds="10" />
+            </div>
         </main>
     );
 }

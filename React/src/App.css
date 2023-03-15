@@ -429,6 +429,11 @@ form {
   justify-content: space-evenly;
 }
 
+.displaySNCUCards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /* Login/Register */
 
 .login-register-content {
@@ -450,5 +455,44 @@ form {
 .login-register-hr {
   height: 100px;
   color: black;
+}
+
+/* SNCU Card */
+
+.SNCUCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  height: 300px;
+  width: 600px;
+  background-color: #D0EAFE;
+  border-radius: 30px;
+  font-family: 'Lato';
+  color: black;
+}
+
+.SNCUinformation {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.SNCUinformation--row {
+  display: flex;
+  /* justify-content: space-evenly; */
+}
+
+.SNCUinfoIcon {
+  height: 30px;
+  margin-right: 15px;
+}
+
+.SNCUCardTitle {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.SNCUCardText {
+  margin: 20px 30px;
 }
 
