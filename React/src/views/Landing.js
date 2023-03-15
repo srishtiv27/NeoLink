@@ -18,7 +18,7 @@ export default function LandingContent() {
                 </p>
                 <div className="d-grid gap-2 d-md-block">
                     <Button type="button" href="/register-healthcare" text="SEARCH FOR SNCU" />
-                    <Button type="button" href="/register-healthcare" text="REGISTER YOUR SNCU" />
+                    <Button type="button" href="/register-sncu" text="REGISTER YOUR SNCU" />
                 </div>
             </div>
             <div>

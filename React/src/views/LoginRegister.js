@@ -15,8 +15,8 @@ export default function LoginRegister() {
                 <hr className="login-register-hr"/>
                 <div className="login-register-SNCU">
                     <h1 className="">SNCU</h1>
-                    <Button type="button" href="/register-healthcare" text="LOGIN" />
-                    <Button type="button" href="/register-healthcare" text="REGISTER" />
+                    <Button type="button" href="/register-sncu" text="LOGIN" />
+                    <Button type="button" href="/register-sncu" text="REGISTER" />
                 </div>
             </div>
         </main>

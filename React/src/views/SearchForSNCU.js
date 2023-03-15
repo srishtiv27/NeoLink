@@ -50,10 +50,10 @@ export default function SearchForSNCU() {
                         <div className="transport">
                             <label className="search-for-SNCU--label">Transport Required
                             </label>
-                           
+
                             <label className="search-for-SNCU--label"> <input type="radio" name="transport" /> Yes</label>
                             <label className="search-for-SNCU--label"> <input type="radio" name="transport" /> No</label>
-                           
+
                         </div>
                         <div className="form-field">
                             <label className="search-for-SNCU--label" >Heart Rate(bpm)
