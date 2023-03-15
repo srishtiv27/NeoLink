@@ -21,6 +21,9 @@ mongoose
 require("./models/healthcareDetails");
 const User = mongoose.model("HealthcareDetails");
 
+require("./models/sncuDetails");
+const UserSNCU = mongoose.model("SNCUDetails");
+
 app.post("/register-healthcare", async (req, res) => {
     const { adminname, admincontact, adminemail, orgname, address, city, state, pincode, password, confirmpassword } = req.body;
 
@@ -85,24 +88,52 @@ app.post("/healthcare-data", async (req, res) => {
     const { token } = req.body;
     try {
         console.log(token);
-      const user = jwt.verify(token, JWT_SECRET, (err, res) => {
-        if (err) {
-          return "token expired";
-        }
-        return res;
-      });
-      console.log(user);
-      if (user == "token expired") {
-        return res.send({ status: "error", data: "token expired" });
-      }
-  
-      const useremail = user.adminemail;
-      User.findOne({ email: useremail })
-        .then((data) => {
-          res.send({ status: "ok", data: data });
-        })
-        .catch((error) => {
-          res.send({ status: "error", data: error });
+        const user = jwt.verify(token, JWT_SECRET, (err, res) => {
+            if (err) {
+                return "token expired";
+            }
+            return res;
         });
+        console.log(user);
+        if (user == "token expired") {
+            return res.send({ status: "error", data: "token expired" });
+        }
+
+        const useremail = user.adminemail;
+        User.findOne({ email: useremail })
+            .then((data) => {
+                res.send({ status: "ok", data: data });
+            })
+            .catch((error) => {
+                res.send({ status: "error", data: error });
+            });
     } catch (error) { }
-  });
+});
+app.post("/register-sncu", async (req, res) => {
+    const { adminname, admincontact, adminemail, orgname, address, city, state, pincode, beds,
+        specializations, staff, severity, maxage, transport, password, confirmpassword } = req.body;
+
+    // const encryptedPassword = await bcrypt.hash(password, 10);
+    try {
+        const oldUser = await UserSNCU.findOne({ adminemail });
+        var errormessage = "";
+        if (oldUser) {
+            errormessage = "User Exists";
+            return res.json({ error: errormessage });
+        }
+        const passwordcheck = req.body.password;
+        const cpasswordcheck = req.body.confirmpassword;
+
+        if (passwordcheck !== cpasswordcheck) {
+            errormessage = "Passwords not matching!";
+            return res.send({ error: errormessage });
+        }
+        await UserSNCU.create({
+            adminname, admincontact, adminemail, orgname, address, city, state, pincode, beds,
+            specializations, staff, severity, maxage, transport, password, confirmpassword
+        });
+        res.send({ status: "ok", error: errormessage });
+    } catch (error) {
+        res.send({ status: "error", error: errormessage });
+    }
+});

@@ -42,7 +42,7 @@ export default function RegisterHealthcare() {
             .then((data) => {
                 console.log(data, "userRegister");
                 if (data.status === "ok") {
-                    alert("Registration Successful");
+                    // alert("Registration Successful");
                     window.location.href = "thanks-for-registering";
                 } else {
                     if (data.error !== "")

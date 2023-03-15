@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const HealthcareDetailsSchema = new mongoose.Schema(
+const SNCUDetailsSchema = new mongoose.Schema(
     {
         adminname: { type: String, required: true },
         admincontact: { type: Number, unique: true, required: true },
@@ -10,12 +10,18 @@ const HealthcareDetailsSchema = new mongoose.Schema(
         city: { type: String, required: true },
         state: { type: String, required: true },
         pincode: { type: Number, required: true },
+        beds: { type: Number, required: true },
+        specializations: { type: String, required: true },
+        staff: { type: Number, required: true },
+        severity: { type: String, required: true },
+        maxage: { type: Number, required: true },
+        transport: { type: String, required: true },
         password: { type: String, required: true },
         confirmpassword: { type: String, required: true },
     },
     {
-        collection: "HealthcareDetails",
+        collection: "SNCUDetails",
     }
 );
 
-mongoose.model("HealthcareDetails", HealthcareDetailsSchema);
+mongoose.model("SNCUDetails", SNCUDetailsSchema);
