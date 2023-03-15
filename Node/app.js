@@ -1,11 +1,13 @@
 const express = require("express");
 const app = express();
+const jwt = require("jsonwebtoken");
 const cors = require("cors");
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 const mongoose = require("mongoose");
 app.use(express.json());
 const mongoUrl = "mongodb+srv://nehal033:zHWE23qQt2FQ7hRG@neolink.ib2ywci.mongodb.net/?retryWrites=true&w=majority"
+const JWT_SECRET = "nehalrosaliasrishti";
 
 mongoose
     .connect(mongoUrl, {
@@ -32,9 +34,8 @@ app.post("/register-healthcare", async (req, res) => {
         }
         const passwordcheck = req.body.password;
         const cpasswordcheck = req.body.confirmpassword;
-        
-        if(passwordcheck !== cpasswordcheck)
-        {
+
+        if (passwordcheck !== cpasswordcheck) {
             errormessage = "Passwords not matching!";
             return res.send({ error: errormessage });
         }
@@ -50,11 +51,35 @@ app.post("/register-healthcare", async (req, res) => {
             password,
             confirmpassword
         });
-        res.send({ status: "ok", error : errormessage});
+        res.send({ status: "ok", error: errormessage });
     } catch (error) {
-        res.send({ status: "error", error : errormessage});
+        res.send({ status: "error", error: errormessage });
     }
 });
 app.listen(3001, () => {
     console.log("Server Started");
+<<<<<<< HEAD
+=======
+});
+
+app.post("/login-healthcare", async (req, res) => {
+    const { adminemail, password } = req.body;
+
+    const user = await User.findOne({ adminemail });
+    if (!user) {
+        return res.json({ error: "User Not found" });
+    }
+    if (password === user.password) {
+        const token = jwt.sign({ email: user.email }, JWT_SECRET, {
+            expiresIn: "15m",
+        });
+
+        if (res.status(201)) {
+            return res.json({ status: "ok", data: token });
+        } else {
+            return res.json({ error: "error" });
+        }
+    }
+    res.json({ status: "error", error: "Invalid Password" });
+>>>>>>> 84efd28f95df8ffef836df284e0e662d9b9b0c4f
 });

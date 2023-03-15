@@ -17,7 +17,7 @@ export default function RegisterHealthcare() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(adminname, admincontact, adminemail, orgname, address, city, state, pincode, password, confirmpassword);
-        fetch("http://localhost:3001/register", {
+        fetch("http://localhost:3001/register-healthcare", {
             method: "POST",
             crossDomain: true,
             headers: {
@@ -44,7 +44,7 @@ export default function RegisterHealthcare() {
                 if (data.status === "ok") {
                     alert("Registration Successful");
                 } else {
-                    if(data.error !== "")
+                    if (data.error !== "")
                         alert(data.error)
                     else
                         alert("Something went wrong");
