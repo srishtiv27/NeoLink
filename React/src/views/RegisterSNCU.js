@@ -72,91 +72,91 @@ export default function RegisterSNCU() {
                 <div className="search-for-SNCU--form">
                     <div>
                         <div className="form-field">
-                            <label className="register-label">Administrator name
+                            <label className="search-for-SNCU--label">Administrator name
                             </label>
-                            <input className="register-input" type="text" name="adminname" onChange={(e) => setadminname(e.target.value)} />
+                            <input className="search-for-SNCU--input" type="text" name="adminname" onChange={(e) => setadminname(e.target.value)} />
                         </div>
                         <div className="form-field">
-                            <label className="register-label">Contact number
+                            <label className="search-for-SNCU--label">Contact number
                             </label>
-                            <input className="register-input" type="number" name="admincontact" onChange={(e) => setadmincontact(e.target.value)} />
+                            <input className="search-for-SNCU--input" type="number" name="admincontact" onChange={(e) => setadmincontact(e.target.value)} />
                         </div>
                         <div className="form-field">
-                            <label className="register-label">Email ID
+                            <label className="search-for-SNCU--label">Email ID
                             </label>
-                            <input className="register-input" type="email" name="adminemail" onChange={(e) => setadminemail(e.target.value)} />
+                            <input className="search-for-SNCU--input" type="email" name="adminemail" onChange={(e) => setadminemail(e.target.value)} />
                         </div>
                         <div className="form-field">
-                            <label className="register-label">Organization name
+                            <label className="search-for-SNCU--label">Organization name
                             </label>
-                            <input className="register-input" type="text" name="orgname" onChange={(e) => setorgname(e.target.value)} />
+                            <input className="search-for-SNCU--input" type="text" name="orgname" onChange={(e) => setorgname(e.target.value)} />
                         </div>
                         <div className="form-field">
-                            <label className="register-label">Address
+                            <label className="search-for-SNCU--label">Address
                             </label>
-                            <input className="register-input" type="text" name="address" onChange={(e) => setaddress(e.target.value)} />
+                            <input className="search-for-SNCU--input" type="text" name="address" onChange={(e) => setaddress(e.target.value)} />
                         </div>
                         <div className="form-field">
-                            <label className="register-label">City
+                            <label className="search-for-SNCU--label">City
                             </label>
-                            <input className="register-input" type="text" name="city" onChange={(e) => setcity(e.target.value)} />
+                            <input className="search-for-SNCU--input" type="text" name="city" onChange={(e) => setcity(e.target.value)} />
                         </div>
                         <div className="form-field">
-                            <label className="register-label">State
+                            <label className="search-for-SNCU--label">State
                             </label>
-                            <input className="register-input" type="text" name="state" onChange={(e) => setstate(e.target.value)} />
+                            <input className="search-for-SNCU--input" type="text" name="state" onChange={(e) => setstate(e.target.value)} />
                         </div>
                         <div className="form-field">
-                            <label className="register-label">Pincode
+                            <label className="search-for-SNCU--label">Pincode
                             </label>
-                            <input className="register-input" type="number" name="pincode" onChange={(e) => setpincode(e.target.value)} />
+                            <input className="search-for-SNCU--input" type="number" name="pincode" onChange={(e) => setpincode(e.target.value)} />
                         </div>
                     </div>
 
                     <div>
                         <div className="form-field">
-                            <label className="register-label">Number of available beds
+                            <label className="search-for-SNCU--label">Number of available beds
                             </label>
-                            <input className="register-input" type="number" name="beds" onChange={(e) => setpincode(e.target.value)} />
+                            <input className="search-for-SNCU--input" type="number" name="beds" onChange={(e) => setpincode(e.target.value)} />
                         </div>
                         <div className="form-field">
-                            <label className="register-label">Specializations
+                            <label className="search-for-SNCU--label">Specializations
                             </label>
-                            <input className="register-input" placeholder="List one or more(comma separated)" type="text" name="specializations" onChange={(e) => setpincode(e.target.value)} />
+                            <input className="search-for-SNCU--input" placeholder="One or more(comma separated)" type="text" name="specializations" onChange={(e) => setpincode(e.target.value)} />
                         </div>
                         <div className="form-field">
-                            <label className="register-label">Staff count
+                            <label className="search-for-SNCU--label">Staff count
                             </label>
-                            <input className="register-input" type="number" name="staff" onChange={(e) => setpincode(e.target.value)} />
+                            <input className="search-for-SNCU--input" type="number" name="staff" onChange={(e) => setpincode(e.target.value)} />
                         </div>
                         <div className="form-field">
-                            <label className="register-label">Severity Level
+                            <label className="search-for-SNCU--label">Severity Level
                             </label>
-                            <input className="register-input" placeholder="High/Medium/Low" type="text" name="severity" onChange={(e) => setpincode(e.target.value)} />
+                            <input className="search-for-SNCU--input" placeholder="High/Medium/Low" type="text" name="severity" onChange={(e) => setpincode(e.target.value)} />
                         </div>
                         <div className="form-field">
-                            <label className="register-label">Maximum Neonate Age
+                            <label className="search-for-SNCU--label">Maximum Neonate Age
                             </label>
-                            <input className="register-input" type="number" name="maxage" onChange={(e) => setpincode(e.target.value)} />
+                            <input className="search-for-SNCU--input" type="number" name="maxage" onChange={(e) => setpincode(e.target.value)} />
                         </div>
                         <div className="form-field">
                         <div className="transport">
-                        <label className="register-label">Transport Availability
+                        <label className="search-for-SNCU--label">Transport Availability
                             </label>
-                            <label className="register-label"> <input type="radio" name="transport" /> Yes</label>
-                            <label className="register-label"> <input type="radio" name="transport" /> No</label>
+                            <label className="search-for-SNCU--label"> <input type="radio" name="transport" /> Yes</label>
+                            <label className="search-for-SNCU--label"> <input type="radio" name="transport" /> No</label>
 
                         </div>
                         </div>
                         <div className="form-field">
-                            <label className="register-label">Password
+                            <label className="search-for-SNCU--label">Password
                             </label>
-                            <input className="register-input" type="password" name="password" onChange={(e) => setpassword(e.target.value)} />
+                            <input className="search-for-SNCU--input" type="password" name="password" onChange={(e) => setpassword(e.target.value)} />
                         </div>
                         <div className="form-field">
-                            <label className="register-label">Confirm Password
+                            <label className="search-for-SNCU--label">Confirm Password
                             </label>
-                            <input className="register-input" type="password" name="confirmpassword" onChange={(e) => setconfirmpassword(e.target.value)} />
+                            <input className="search-for-SNCU--input" type="password" name="confirmpassword" onChange={(e) => setconfirmpassword(e.target.value)} />
                         </div>
                     </div>
                 </div>
