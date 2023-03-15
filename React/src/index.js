@@ -8,6 +8,7 @@ import NeonatalCare from './views/NeonatalCare';
 import Volunteer from './views/Volunteer';
 import ThanksForRegistering from './views/ThanksForRegistering';
 import LoginHealthcare from './views/LoginHealthcare';
+import SearchForSNCU from './views/SearchForSNCU';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <LoginHealthcare/>,
+  },
+  {
+    path: "/search-for-SNCU",
+    element: <SearchForSNCU/>,
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

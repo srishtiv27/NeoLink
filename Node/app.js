@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: false }));
 const mongoose = require("mongoose");
 app.use(express.json());
 const mongoUrl = "mongodb+srv://nehal033:zHWE23qQt2FQ7hRG@neolink.ib2ywci.mongodb.net/?retryWrites=true&w=majority"
-const JWT_SECRET = "nehalrosaliasrishti";
+const JWT_SECRET = "nehalrosaliasrishtirosowlia";
 
 mongoose
     .connect(mongoUrl, {
@@ -68,8 +68,8 @@ app.post("/login-healthcare", async (req, res) => {
         return res.json({ error: "User Not found" });
     }
     if (password === user.password) {
-        const token = jwt.sign({ email: user.email }, JWT_SECRET, {
-            expiresIn: "15m",
+        const token = jwt.sign({ email: user.adminemail }, JWT_SECRET, {
+            expiresIn: "150m",
         });
 
         if (res.status(201)) {
@@ -80,3 +80,29 @@ app.post("/login-healthcare", async (req, res) => {
     }
     res.json({ status: "error", error: "Invalid Password" });
 });
+
+app.post("/healthcare-data", async (req, res) => {
+    const { token } = req.body;
+    try {
+        console.log(token);
+      const user = jwt.verify(token, JWT_SECRET, (err, res) => {
+        if (err) {
+          return "token expired";
+        }
+        return res;
+      });
+      console.log(user);
+      if (user == "token expired") {
+        return res.send({ status: "error", data: "token expired" });
+      }
+  
+      const useremail = user.adminemail;
+      User.findOne({ email: useremail })
+        .then((data) => {
+          res.send({ status: "ok", data: data });
+        })
+        .catch((error) => {
+          res.send({ status: "error", data: error });
+        });
+    } catch (error) { }
+  });

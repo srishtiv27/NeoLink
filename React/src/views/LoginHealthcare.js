@@ -6,36 +6,6 @@ export default function LoginHealthcare() {
     const [adminemail, setadminemail] = useState("");
     const [password, setpassword] = useState("");
 
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     console.log(adminname, admincontact, adminemail, orgname, address, city, state, pincode, password, confirmpassword);
-    //     fetch("http://localhost:3001/register", {
-    //         method: "POST",
-    //         crossDomain: true,
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             Accept: "application/json",
-    //             "Access-Control-Allow-Origin": "*",
-    //         },
-    //         body: JSON.stringify({
-    //             adminemail,
-    //             password
-    //         }),
-    //     })
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //             console.log(data, "userRegister");
-    //             if (data.status === "ok") {
-    //                 alert("Registration Successful");
-    //             } else {
-    //                 if(data.error !== "")
-    //                     alert(data.error)
-    //                 else
-    //                     alert("Something went wrong");
-    //             }
-    //         });
-    // };
     function handleSubmit(e) {
         e.preventDefault();
 
@@ -58,10 +28,10 @@ export default function LoginHealthcare() {
                 console.log(data, "userRegister");
                 if (data.status == "ok") {
                     alert("Login successful");
-                    // window.localStorage.setItem("token", data.data);
+                    window.localStorage.setItem("token", data.data);
                     // window.localStorage.setItem("loggedIn", true);
 
-                    // window.location.href = "./userDetails";
+                    window.location.href = "search-for-SNCU";
                 } else {
                     alert("Invalid username/password");
                 }

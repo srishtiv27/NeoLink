@@ -369,3 +369,22 @@ input {
   color: black;
   font-weight: 800;
 }
+
+/* Search for SNCU */
+
+.search-for-SNCU-main {
+  text-align: center;
+  margin-bottom: 150px;
+  margin-top: 150px;
+}
+
+.search-for-SNCU-main--content {
+  margin-top: 50px;
+}
+
+.search-for-SNCU-main--title {
+  font-family: 'Lato';
+  font-size: 39px;
+  color: black;
+  font-weight: 800;
+}
