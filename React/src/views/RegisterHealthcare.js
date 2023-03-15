@@ -17,7 +17,7 @@ export default function RegisterHealthcare() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(adminname, admincontact, adminemail, orgname, address, city, state, pincode, password, confirmpassword);
-        fetch("http://localhost:3001/register-healthcare", {
+        fetch("http://localhost:3001/register", {
             method: "POST",
             crossDomain: true,
             headers: {
