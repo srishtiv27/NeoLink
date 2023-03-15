@@ -7,7 +7,7 @@ import RegisterHealthcare from './views/RegisterHealthcare';
 import NeonatalCare from './views/NeonatalCare';
 import Volunteer from './views/Volunteer';
 import ThanksForRegistering from './views/ThanksForRegistering';
-
+import LoginHealthcare from './views/LoginHealthcare';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -34,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/thanks-for-registering",
     element: <ThanksForRegistering/>,
+  },
+  {
+    path: "/login",
+    element: <LoginHealthcare/>,
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
