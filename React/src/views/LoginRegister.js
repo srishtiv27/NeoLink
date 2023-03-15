@@ -9,7 +9,7 @@ export default function LoginRegister() {
             <div className="login-register-content">
                 <div className="login-register-healthcare">
                     <h1 className="">Healthcare Provider</h1>
-                    <Button type="button" href="/register-healthcare" text="LOGIN" />
+                    <Button type="button" href="/login" text="LOGIN" />
                     <Button type="button" href="/register-healthcare" text="REGISTER" />
                 </div>
                 <hr className="login-register-hr"/>
