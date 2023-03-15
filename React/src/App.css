@@ -350,3 +350,22 @@ input {
   line-height: 50px;
   color: black;
 }
+
+/* Thanks for registering */
+
+.thanks-for-registering-main {
+  text-align: center;
+  margin-bottom: 150px;
+  margin-top: 150px;
+}
+
+.thanks-for-registering-main--content {
+  margin-top: 50px;
+}
+
+.thanks-for-registering-main--title {
+  font-family: 'Lato';
+  font-size: 39px;
+  color: black;
+  font-weight: 800;
+}
