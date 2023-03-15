@@ -426,3 +426,26 @@ form {
   display: flex;
 }
 
+/* Login/Register */
+
+.login-register-content {
+  display: flex;
+  margin-top: 200px;
+  justify-content: space-evenly;
+}
+
+.login-register-healthcare {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-register-SNCU {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-register-hr {
+  height: 100px;
+  color: black;
+}
+

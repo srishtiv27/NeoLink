@@ -9,11 +9,11 @@ import Volunteer from './views/Volunteer';
 import ThanksForRegistering from './views/ThanksForRegistering';
 import LoginHealthcare from './views/LoginHealthcare';
 import SearchForSNCU from './views/SearchForSNCU';
+import LoginRegister from './views/LoginRegister';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
 
 const router = createBrowserRouter([
   {
@@ -43,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/search-for-SNCU",
     element: <SearchForSNCU/>,
+  },
+  {
+    path: "/login-register",
+    element: <LoginRegister/>,
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
