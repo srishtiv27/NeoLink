@@ -10,10 +10,10 @@ export default function NeonatalCare() {
             <div className="volunteer--main">
                 <h1 className="volunteer--title">Volunteer with us!</h1>
                 <div className="volunteer--content">
-                    <p className="volunteer--text">Join our community of healthcare professionals, technologists, and 
-                    data scientists dedicated to improving neonatal health outcomes. As a Neolink volunteer, you'll have 
-                    the opportunity to use your skills and expertise to make a real impact in the lives of sick newborns
-                    and their families. </p>
+                    <p className="volunteer--text">Join our community of healthcare professionals, technologists, and
+                        data scientists dedicated to improving neonatal health outcomes. As a Neolink volunteer, you'll have
+                        the opportunity to use your skills and expertise to make a real impact in the lives of sick newborns
+                        and their families. </p>
                 </div>
                 <div className="volunteer--cards">
                     <div className="volunteer--card">
@@ -26,20 +26,21 @@ export default function NeonatalCare() {
                         <p>Use your skills to improve neonatal health outcomes</p>
                     </div>
                 </div>
+                </div>
                 <div className="volunteer--interested">
                     <img src={VolunteerImage} className="neonatal--img"></img>
                     <div className="volunteer--interested--content">
-                        <p>If you're interested in volunteering with Neolink, please reach out to us through our 
-                            contact page or email us directly, or by filling out the form given below. 
+                        <p>If you're interested in volunteering with Neolink, please reach out to us through our
+                            contact page or email us directly, or by filling out the form given below.
                         </p>
                         {/* <br/> */}
-                        <p>Let us know how you would like to contribute and what skills or expertise you can bring 
-                            to the table! 
+                        <p>Let us know how you would like to contribute and what skills or expertise you can bring
+                            to the table!
                         </p>
                         <VolunteerButton href="/" text="VOLUNTEER" />
                     </div>
                 </div>
             </div>
-        </div>
+        //  </div>
     )
 }
