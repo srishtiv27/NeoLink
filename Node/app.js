@@ -30,10 +30,10 @@ app.post("/register", async (req, res) => {
             errormessage = "User Exists";
             return res.json({ error: errormessage });
         }
-        const passwordcheck = await User.findOne({password});
-        const cpasswordcheck = await User.findOne({confirmpassword});
+        const passwordcheck = req.body.password;
+        const cpasswordcheck = req.body.confirmpassword;
         
-        if(passwordcheck != cpasswordcheck)
+        if(passwordcheck !== cpasswordcheck)
         {
             errormessage = "Passwords not matching!";
             return res.send({ error: errormessage });
@@ -50,9 +50,9 @@ app.post("/register", async (req, res) => {
             password,
             confirmpassword
         });
-        res.send({ status: "ok" });
+        res.send({ status: "ok", error : errormessage});
     } catch (error) {
-        res.send({ status: "error" });
+        res.send({ status: "error", error : errormessage});
     }
 });
 app.listen(3001, () => {
