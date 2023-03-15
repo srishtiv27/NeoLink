@@ -6,6 +6,7 @@
 /Node/node_modules
 /.pnp
 .pnp.js
+/React/node_modules/.cache
 
 # testing
 /coverage
