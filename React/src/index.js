@@ -12,7 +12,6 @@ import SearchForSNCU from './views/SearchForSNCU';
 import LoginRegister from './views/LoginRegister';
 import RegisterSNCU from './views/RegisterSNCU';
 import LoginSNCU from './views/LoginSNCU';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
 import {
