@@ -445,16 +445,28 @@ form {
 .login-register-healthcare {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  width: 370px;
 }
 
 .login-register-SNCU {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  width: 370px;
+  /* justify-content: center; */
 }
 
 .login-register-hr {
   height: 100px;
   color: black;
+}
+
+.login-register-title {
+  font-family: 'Lato';
+  font-size: 39px;
+  color: black;
+  font-weight: 800;
 }
 
 /* SNCU Card */
