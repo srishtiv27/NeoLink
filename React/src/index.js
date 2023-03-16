@@ -12,6 +12,7 @@ import SearchForSNCU from './views/SearchForSNCU';
 import LoginRegister from './views/LoginRegister';
 import RegisterSNCU from './views/RegisterSNCU';
 import LoginSNCU from './views/LoginSNCU';
+import SearchSNCUResults from './views/SearchSNCUResults';
 
 
 import {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
   {
     path: "/login-sncu",
     element: <LoginSNCU/>,
+  },
+  {
+    path: "/search-sncu-results",
+    element: <SearchSNCUResults/>,
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

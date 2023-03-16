@@ -4,7 +4,6 @@ import '@coreui/coreui/dist/css/coreui.min.css'
 
 const vars = {
     'margin-top': '30px',
-    'margin-right': '25px',
     '--cui-btn-color': "white",
     '--cui-btn-bg': "#10152C",
     '--cui-btn-border-color': 'transparent',
@@ -15,7 +14,7 @@ const vars = {
     '--cui-btn-font-weight': '600',
     '--cui-btn-hover-color': 'black',
     '--cui-btn-hover-bg': '#D0EAFE',
-    '--cui-btn-hover-border-color': 'transparent',
+    '--cui-btn-hover-border-color': '#10152C',
     '--cui-btn-active-color': 'black',
     '--cui-btn-active-bg': '##D0EAFE',
     '--cui-btn-active-border-color': 'transparent'
