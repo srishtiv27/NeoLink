@@ -162,6 +162,78 @@ nav {
   color: black;
 }
 
+.about--title {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 62px;
+  color: black;
+}
+
+.mission--main {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 40px;
+}
+
+.about--content {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+  margin-top: 200px;
+}
+
+.contact--content {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.about--img {
+  width: 650px;
+}
+
+.contact--title {
+  text-align: center;
+  letter-spacing: -0.05em;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 62px;
+  color: black;
+}
+
+.contact--text {
+  margin-top: 30px;
+  max-width: 650px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 35px;
+  color: black;
+}
+
+.contact--heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about--text {
+  margin-top: 30px;
+  max-width: 650px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 50px;
+  color: black;
+}
+
 .healthcare--subtitle {
   /* margin-top: 46px;
   max-width: 650px; */
@@ -443,11 +515,11 @@ form {
   justify-content: space-evenly;
 }
 
-.login-register { 
+.login-register {
   justify-content: center;
   border-radius: 30px;
   background-color: #101F2C;
-  color:white;
+  color: white;
   height: 300px;
   display: flex;
   flex-direction: column;
