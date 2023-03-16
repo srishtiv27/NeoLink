@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "jsonwebtoken": "^9.0.0"
+    "@coreui/react": "^4.6.0",
+    "bootstrap": "^5.2.3",
+    "jsonwebtoken": "^9.0.0",
+    "react-multiselect-checkboxes": "^0.1.1"
   }
 }

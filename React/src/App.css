@@ -508,3 +508,29 @@ form {
   margin: 20px 30px;
 }
 
+.specialization {
+  display: flex;
+}
+
+.specialization--label {
+  text-align: right;
+  margin-right: 40px;
+  margin-top: 20px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 50px;
+  color: black;
+
+}
+
+.specialization--input {
+  width: 250px;
+  height: 40px;
+  margin-top: 20px;
+  border-color: transparent;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
