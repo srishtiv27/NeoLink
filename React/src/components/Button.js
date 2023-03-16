@@ -4,7 +4,6 @@ import '@coreui/coreui/dist/css/coreui.min.css'
 
 const vars = {
     'marginTop': '30px',
-    'marginRight': '25px',
     '--cui-btn-color': "black",
     '--cui-btn-bg': "#F5F5DA",
     '--cui-btn-border-color': 'transparent',

@@ -526,3 +526,7 @@ form {
   padding-bottom: 10px;
   text-align: center;
 }
+
+.margin-right {
+  margin-right: 25px;
+}

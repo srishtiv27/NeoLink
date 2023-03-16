@@ -16,7 +16,7 @@ export default function LandingContent() {
                     prioritize their health through smart referrals to Special Newborn
                     Care Units (SNCUs) and coordinated care.
                 </p>
-                <div className="d-grid gap-2 d-md-block">
+                <div className="d-grid gap-4 d-md-flex">
                     <Button type="button" href="/register-healthcare" text="SEARCH FOR SNCU" />
                     
                     <Button type="button" href="/register-sncu" text="REGISTER YOUR SNCU" />
