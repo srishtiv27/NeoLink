@@ -74,6 +74,9 @@ export default function RegisterSNCU() {
                 <p className="healthcare--subtitle">
                     To facilitate the referral process and ensure timely care for sick newborns, our smart referral system will require some important details from your SNCU.
                 </p>
+                <p className="healthcare--subtitle">
+                    <i>Already registered? <a href = "/login-sncu">Sign in!</a></i>
+                </p>
             </div>
             <form className="search-for-SNCU--main-form" onSubmit={handleSubmit}>
                 <div className="search-for-SNCU--form">

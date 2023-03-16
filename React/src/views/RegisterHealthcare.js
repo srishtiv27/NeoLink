@@ -61,6 +61,9 @@ export default function RegisterHealthcare() {
                 <p className="healthcare--subtitle">
                     To find the best SNCU for your newborns' needs, please provide us with the following details!
                 </p>
+                <p className="healthcare--subtitle">
+                    <i>Already registered? <a href = "/login-healthcare">Sign in!</a></i>
+                </p>
             </div>
             <form onSubmit={handleSubmit}>
                 <div className="healthcare--form">
