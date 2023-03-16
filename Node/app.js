@@ -158,3 +158,15 @@ app.post("/login-sncu", async (req, res) => {
     }
     res.json({ status: "error", error: "Invalid Password" });
 });
+
+app.post("/search-sncu", async (req, res) => {
+    const { location, transport, severity, beds, maxage, specializations } = req.body;
+    console.log("app.js");
+    // const encryptedPassword = await bcrypt.hash(password, 10);
+    try {
+        res.send({ status: "ok", data : "hello" });
+    } catch (error) {
+        res.send({ status: "error", error: "errormessage" });
+    }
+    console.log(req.body);
+});

@@ -9,7 +9,12 @@ import { components } from "react-select";
 // import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
 
 export default function SearchForSNCU() {
-    const [adminname, setadminname] = useState("");
+    const [location, setlocation] = useState("");
+    const [transport, settransport] = useState("");
+    const [severity, setseverity] = useState("");
+    const [beds, setbeds] = useState("");
+    const [maxage, setmaxage] = useState("");
+    const [specializations, setspecializations] = useState("");
     const [optionSelected, setoptionSelected] = useState(null);
 
     const Option = (props) => {
@@ -41,10 +46,14 @@ export default function SearchForSNCU() {
 
     var handleChange = (selected) => {
         setoptionSelected(selected);
+        setspecializations(selected);
     };
 
-    useEffect(() => {
-        fetch("http://localhost:3001/healthcare-data", {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(location, transport, severity, beds, maxage, specializations );
+        console.log("handle submit");
+        fetch("http://localhost:3001/search-sncu", {
             method: "POST",
             crossDomain: true,
             headers: {
@@ -53,22 +62,16 @@ export default function SearchForSNCU() {
                 "Access-Control-Allow-Origin": "*",
             },
             body: JSON.stringify({
-                token: window.localStorage.getItem("token"),
+                location, transport, severity, beds, maxage, specializations
             }),
         })
             .then((res) => res.json())
             .then((data) => {
                 console.log(data, "userData");
-
-                setadminname(data.data.adminname);
-
-                if (data.data === "token expired") {
-                    alert("Token expired login again");
-                    window.localStorage.clear();
-                    // window.location.href = "./sign-in";
-                }
+                console.log("handle submit 2");
+                alert("Successful");
             });
-    }, []);
+        };
 
     return (
         <main className="healthcare--main">
@@ -77,7 +80,7 @@ export default function SearchForSNCU() {
             <p className="healthcare--subtitle">
                 Help us in referring you to the best SNCU by providing us some details.
             </p>
-            <form className="search-for-SNCU--main-form">
+            <form className="search-for-SNCU--main-form" onSubmit={handleSubmit}>
                 <div className="search-for-SNCU--form">
                     <div>
                         <div className="form-field">
@@ -85,7 +88,8 @@ export default function SearchForSNCU() {
                             <input
                                 className="search-for-SNCU--input"
                                 type="text"
-                                name="adminname"
+                                name="location"
+                                onChange={(e) => setlocation(e.target.value)} 
                             />
                         </div>
                         <div >
@@ -95,11 +99,11 @@ export default function SearchForSNCU() {
 
                             <label className="specialization--label">
                                 {" "}
-                                <input type="radio" name="transport" /> Yes
+                                <input type="radio" name="transport" value = "yes" onChange={(e) => settransport(e.target.value)}/> Yes
                             </label>
                             <label className="specialization--label">
                                 {" "}
-                                <input type="radio" name="transport" /> No
+                                <input type="radio" name="transport" value = "yes" onChange={(e) => settransport(e.target.value)}/> No
                             </label>
                         </div>
                         <div className="form-field">
@@ -109,6 +113,7 @@ export default function SearchForSNCU() {
                                 placeholder="High/Medium/Low"
                                 type="text"
                                 name="severity"
+                                onChange={(e) => setseverity(e.target.value)}
                             />
                         </div>
                     </div>
@@ -119,6 +124,7 @@ export default function SearchForSNCU() {
                                 className="search-for-SNCU--input"
                                 type="number"
                                 name="beds"
+                                onChange={(e) => setbeds(e.target.value)}
                             />
                         </div>
                         <div className="form-field">
@@ -128,12 +134,14 @@ export default function SearchForSNCU() {
                                 placeholder="In Days"
                                 type="number"
                                 name="maxage"
+                                onChange={(e) => setmaxage(e.target.value)}
                             />
                         </div>
                         <div className="specialization">
                             <label className="specialization--label">Specialization(s) Required</label>
                             <ReactSelect
                                 className="specialization--input"
+                                name = "specializations"
                                 options={specializationsOptions}
                                 isMulti
                                 closeMenuOnSelect={false}
