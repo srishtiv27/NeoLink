@@ -4,19 +4,22 @@ import Navbar from "../components/Navbar";
 
 export default function LoginRegister() {
     return (
-        <main className="login-register-main">
+        <main>
             <Navbar />
             <div className="login-register-content">
-                <div className="login-register-healthcare">
+                <div className="login-register">
                     <h1 className="login-register-title">Healthcare Provider</h1>
-                    <Button type="button" href="/login-healthcare" text="LOGIN" />
-                    <Button type="button" href="/register-healthcare" text="REGISTER" />
+                    <div className="d-grid gap-2 col-6 mx-auto">
+                        <Button type="button" href="/login-healthcare" text="LOGIN" />
+                        <Button type="button" href="/register-healthcare" text="REGISTER" />
+                    </div>
                 </div>
-                <hr className="login-register-hr"/>
-                <div className="login-register-SNCU">
+                <div className="login-register">
                     <h1 className="login-register-title">SNCU</h1>
-                    <Button type="button" href="/login-sncu" text="LOGIN" />
-                    <Button type="button" href="/register-sncu" text="REGISTER" />
+                    <div className="d-grid gap-2 col-6 mx-auto">
+                        <Button type="button" href="/login-sncu" text="LOGIN" />
+                        <Button type="button" href="/register-sncu" text="REGISTER" />
+                    </div>
                 </div>
             </div>
         </main>

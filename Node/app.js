@@ -169,8 +169,6 @@ app.post("/search-sncu", async (req, res) => {
         specializationsArr.push(specializations[i].label);
     }
 
-    console.log(specializationsArr);
-
     try {
         const result = await UserSNCU
         .find({city: location,

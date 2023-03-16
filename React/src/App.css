@@ -436,36 +436,28 @@ form {
 
 /* Login/Register */
 
+
 .login-register-content {
   display: flex;
-  margin-top: 200px;
+  margin-top: 300px;
   justify-content: space-evenly;
 }
 
-.login-register-healthcare {
+.login-register { 
+  justify-content: center;
+  border-radius: 30px;
+  background-color: #101F2C;
+  color:white;
+  height: 300px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 370px;
-}
-
-.login-register-SNCU {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 370px;
-  /* justify-content: center; */
-}
-
-.login-register-hr {
-  height: 100px;
-  color: black;
+  width: 500px;
 }
 
 .login-register-title {
   font-family: 'Lato';
   font-size: 39px;
-  color: black;
   font-weight: 800;
 }
 
