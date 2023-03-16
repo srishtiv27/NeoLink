@@ -79,6 +79,9 @@ export default function SearchForSNCU() {
                 var resultAddressData = [];
                 var resultEmailData = [];
                 var resultBedsData = [];
+              
+                
+
                 for (let i = 0; i < data.data.length; i++) {
                     resultOrgNameData.push(data.data[i].orgname);
                     resultCityData.push(data.data[i].city);
@@ -103,6 +106,7 @@ export default function SearchForSNCU() {
                     }
                     
                     resultSpecializationsData.push(specializationsString);
+                    
                 }
 
                 // console.log(resultOrgName[0]);
@@ -116,6 +120,10 @@ export default function SearchForSNCU() {
                 // console.log(data.data[0], "userData");
                 console.log("handle submit 2");
                 alert("Successful");
+               
+                // window.localStorage.setItem("loggedIn", true);
+                window.localStorage.setItem("data", data.data);
+                window.location.href = "search-sncu-results";
             });
         };
 
@@ -203,18 +211,18 @@ export default function SearchForSNCU() {
                     </div>
                 </div>
                 <div className="submit-button">
-                    <Button type="submit" text="SUBMIT" href="/search-sncu-results"/>
+                    <Button type="submit" text="SUBMIT"/>
                 </div>
             </form>
             <br />
             <br />
             <br />
-            {/* <div className="displaySNCUCards">
+            <div className="displaySNCUCards">
                 <SNCUCard name={resultOrgName[0]} city={resultCity[0]} specializations={resultSpecializations[0]} phone={resultContact[0]}
                           email={resultEmail[0]} address={resultAddress[0]} beds={resultBeds[0]}/>
                 <SNCUCard name="Max Hospital SNCU" city="New Delhi" specializations="Cardiology and Pediatrics" phone="9780683681" email="nehal@email.com"
                     address="A-22, Connaught Place" beds="10" />
-            </div> */}
+            </div>
         </main>
     );
 }

@@ -31,7 +31,7 @@ export default function SNCUCard(props) {
                 </div>
             </div>
             <div>
-                <VolunteerButton type="button" href="/register-healthcare" text="SEARCH FOR SNCU" />
+                <VolunteerButton type="button" href="/register-healthcare" text="SEND REQUEST" />
             </div>
             
         </div>

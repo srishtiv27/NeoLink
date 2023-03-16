@@ -3,7 +3,7 @@ import { CButton } from '@coreui/react'
 import '@coreui/coreui/dist/css/coreui.min.css'
 
 const vars = {
-    'margin-top': '30px',
+    'marginTop': '30px',
     '--cui-btn-color': "white",
     '--cui-btn-bg': "#10152C",
     '--cui-btn-border-color': 'transparent',
