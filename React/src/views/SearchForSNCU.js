@@ -14,6 +14,8 @@ export default function SearchForSNCU() {
     const [specializations, setspecializations] = useState("");
     const [optionSelected, setoptionSelected] = useState(null);
 
+    const [resultOrgName, setresultOrgName] = useState("");
+
     const Option = (props) => {
         return (
             <div>
@@ -64,7 +66,13 @@ export default function SearchForSNCU() {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data, "userData");
+                var resultOrgNameData = []
+                for (let i = 0; i < data.data.length; i++) {
+                    resultOrgNameData.push(data.data[i].orgname);
+                }
+                // console.log(resultOrgName[0]);
+                setresultOrgName(resultOrgNameData);
+                // console.log(data.data[0], "userData");
                 console.log("handle submit 2");
                 alert("Successful");
             });
@@ -161,7 +169,7 @@ export default function SearchForSNCU() {
             <br />
             <br />
             <div className="displaySNCUCards">
-                <SNCUCard name="Max Hospital SNCU" city="New Delhi" specializations="Cardiology and Pediatrics" phone="9780683681" email="nehal@email.com"
+                <SNCUCard name={resultOrgName[0]} city="New Delhi" specializations="Cardiology and Pediatrics" phone="9780683681" email="nehal@email.com"
                     address="A-22, Connaught Place" beds="10" />
                 <SNCUCard name="Max Hospital SNCU" city="New Delhi" specializations="Cardiology and Pediatrics" phone="9780683681" email="nehal@email.com"
                     address="A-22, Connaught Place" beds="10" />
