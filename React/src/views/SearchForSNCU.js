@@ -4,9 +4,6 @@ import Button from "../components/Button";
 import SNCUCard from "../components/SNCUCard";
 import { default as ReactSelect } from "react-select";
 import { components } from "react-select";
-// import { MultiSelect } from 'primereact/multiselect';
-
-// import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
 
 export default function SearchForSNCU() {
     const [location, setlocation] = useState("");
@@ -103,7 +100,7 @@ export default function SearchForSNCU() {
                             </label>
                             <label className="specialization--label">
                                 {" "}
-                                <input type="radio" name="transport" value = "yes" onChange={(e) => settransport(e.target.value)}/> No
+                                <input type="radio" name="transport" value = "no" onChange={(e) => settransport(e.target.value)}/> No
                             </label>
                         </div>
                         <div className="form-field">
@@ -128,7 +125,7 @@ export default function SearchForSNCU() {
                             />
                         </div>
                         <div className="form-field">
-                            <label className="search-for-SNCU--label">Max Neonate Age</label>
+                            <label className="search-for-SNCU--label">Neonate Age</label>
                             <input
                                 className="search-for-SNCU--input"
                                 placeholder="In Days"

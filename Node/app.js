@@ -128,9 +128,12 @@ app.post("/register-sncu", async (req, res) => {
             errormessage = "Passwords not matching!";
             return res.send({ error: errormessage });
         }
+
+        var specializationsArr = specializations.split(', ');
+
         await UserSNCU.create({
             adminname, admincontact, adminemail, orgname, address, city, state, pincode, beds,
-            specializations, staff, severity, maxage, transport, password, confirmpassword
+            specializationsArr, staff, severity, maxage, transport, password, confirmpassword
         });
         res.send({ status: "ok", error: errormessage });
     } catch (error) {
@@ -161,12 +164,26 @@ app.post("/login-sncu", async (req, res) => {
 
 app.post("/search-sncu", async (req, res) => {
     const { location, transport, severity, beds, maxage, specializations } = req.body;
-    console.log("app.js");
-    // const encryptedPassword = await bcrypt.hash(password, 10);
+    var specializationsArr = [];
+    for (let i = 0; i < specializations.length; i++) {
+        specializationsArr.push(specializations[i].label);
+    }
+
+    console.log(specializationsArr);
+
     try {
-        res.send({ status: "ok", data : "hello" });
+        const result = await UserSNCU
+        .find({city: location,
+               maxage: {$gte : maxage}, 
+               severity: severity,
+               beds: {$gte: beds},
+               transport: transport,
+               specializationsArr: {$in: specializationsArr},
+            })
+
+        res.send({ status: "ok", data : result });
     } catch (error) {
         res.send({ status: "error", error: "errormessage" });
     }
-    console.log(req.body);
+    
 });

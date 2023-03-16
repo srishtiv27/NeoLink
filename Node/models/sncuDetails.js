@@ -11,7 +11,7 @@ const SNCUDetailsSchema = new mongoose.Schema(
         state: { type: String, required: true },
         pincode: { type: Number, required: true },
         beds: { type: Number, required: true },
-        specializations: { type: String, required: true },
+        specializationsArr: { type: Array, required: true },
         staff: { type: Number, required: true },
         severity: { type: String, required: true },
         maxage: { type: Number, required: true },
