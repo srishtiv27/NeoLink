@@ -16,8 +16,6 @@ export default function SearchSNCUResults() {
     return data.map((el) => {
         return (
             <div>
-                {/* <h1>Hi! I am the Search for SNCU Page</h1> */} 
-                {/* <h1>Hi! I am {data[0].orgname}</h1> */}
                 <SNCUCard name={el.orgname} city={el.city} specializations={el.specializationsArr} phone={el.admincontact}
                     email={el.adminemail} address={el.address} beds={el.beds} />
             </div>
