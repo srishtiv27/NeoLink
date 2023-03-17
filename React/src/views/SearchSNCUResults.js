@@ -1,17 +1,27 @@
 import React, { Component, useEffect, useReducer, useState } from "react";
+import { useLocation } from 'react-router-dom';
+import SNCUCard from "../components/SNCUCard";
 
 export default function SearchSNCUResults() {
-    const [data, setData] = useState(localStorage.getItem("data"));
-    console.log("Search SNCU Results: " + data);
+    const location = useLocation();
+    // const [data, setData] = useState(localStorage.getItem("data"));
+    // console.log("Search SNCU Results: " + location.state.data.orgname);
+    const data = location.state.data;
 
-    useEffect(() => {
-        var data = window.localStorage.getItem("data");
-        // console.log("Search SNCU Results: " + data);
+    // useEffect(() => {
+    //     var data = window.localStorage.getItem("data");
+    //     // console.log("Search SNCU Results: " + data);
+    // });
+
+    return data.map((el) => {
+        return (
+            <div>
+                {/* <h1>Hi! I am the Search for SNCU Page</h1> */} 
+                {/* <h1>Hi! I am {data[0].orgname}</h1> */}
+                <SNCUCard name={el.orgname} city={el.city} specializations={el.specializationsArr} phone={el.admincontact}
+                    email={el.adminemail} address={el.address} beds={el.beds} />
+            </div>
+        )
     });
 
-    return (
-        <div>
-            <h1>Hi! I am the Search for SNCU Page</h1>
-        </div>
-    )
 }

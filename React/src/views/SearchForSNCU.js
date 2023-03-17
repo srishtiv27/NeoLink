@@ -4,8 +4,10 @@ import Button from "../components/Button";
 import SNCUCard from "../components/SNCUCard";
 import { default as ReactSelect } from "react-select";
 import { components } from "react-select";
+import { useNavigate } from "react-router-dom";
 
 export default function SearchForSNCU() {
+    const navigate = useNavigate();
     const [location, setlocation] = useState("");
     const [transport, settransport] = useState("");
     const [severity, setseverity] = useState("");
@@ -79,7 +81,7 @@ export default function SearchForSNCU() {
                 var resultAddressData = [];
                 var resultEmailData = [];
                 var resultBedsData = [];
-              
+                var resultData = data.data;
                 
 
                 for (let i = 0; i < data.data.length; i++) {
@@ -121,9 +123,10 @@ export default function SearchForSNCU() {
                 console.log("handle submit 2");
                 alert("Successful");
                
+                navigate("/search-sncu-results", {state: {data: resultData}})
                 // window.localStorage.setItem("loggedIn", true);
-                window.localStorage.setItem("data", data.data);
-                window.location.href = "search-sncu-results";
+                // window.localStorage.setItem("data", data.data);
+                // window.location.href = "search-sncu-results";
             });
         };
 
