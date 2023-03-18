@@ -6,8 +6,42 @@ import logo from "../images/neolink-logo.png";
 import medstarlogo from "../images/medstar-logo.png";
 import NavbarHealthcare from "../components/NavbarHealthcare";
 import ClickButton from "../components/ClickButton";
+import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
+    var sncuadminemail = window.localStorage.getItem("adminemail");
+    const navigate = useNavigate();
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log(sncuadminemail);
+        fetch("http://localhost:3001/get-details", {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+            body: JSON.stringify({
+                sncuadminemail
+            }),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data, "Referral Details found");
+                if (data.status == "ok") {
+                    alert("Successful");
+                    // window.localStorage.setItem("token", data.data);
+                    // window.localStorage.setItem("adminemail", adminemail);
+                    // window.localStorage.setItem("loggedIn", true);
+                    navigate("/referral-requests", { state: { data: data.data } });
+                    // window.location.href = "referral-requests";
+                } else {
+                    alert("Error");
+                }
+            });
+    }
     return (
         <div className="dashboard">
             {/* <div class="sidenav">
@@ -20,7 +54,7 @@ export default function Dashboard() {
                 </div>
             </div> */}
             <div className="dashboard--main-content">
-                <NavbarHealthcare/>
+                <NavbarHealthcare />
                 <h1 className="dashboard--title">Hi, Medstar SNCU!</h1>
                 <div className="dashboard--cards">
                     <div className="header--card">
@@ -66,7 +100,7 @@ export default function Dashboard() {
                         <div className="emergency--alert-card">
                             <div className="emergency--button-image">
                                 {/* <VolunteerButton text="REFERRAL REQUESTS"></VolunteerButton> */}
-                                <ClickButton text="REFERRAL REQUESTS"></ClickButton>
+                                <ClickButton handleSubmit={handleSubmit} text="REFERRAL REQUESTS"></ClickButton>
                                 <img src={medstarlogo} className="medstar--icon" alt="logo" />
                             </div>
                             <div className="emergency--info-align">

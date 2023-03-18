@@ -213,6 +213,7 @@ app.post("/get-details", async (req, res) => {
                 sncuadminemail: sncuadminemail
             }
         )
+        console.log(result)
         res.send({ status: "ok", data: result});
     } catch (error) {
         res.send({ status: "error", error: "Error"});

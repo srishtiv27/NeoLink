@@ -29,9 +29,9 @@ export default function LoginSNCU() {
                 if (data.status == "ok") {
                     alert("Login successful");
                     window.localStorage.setItem("token", data.data);
+                    window.localStorage.setItem("adminemail", adminemail);
                     // window.localStorage.setItem("loggedIn", true);
-
-                    window.location.href = "referral-requests";
+                    window.location.href = "dashboard";
                 } else {
                     alert("Invalid username/password");
                 }
