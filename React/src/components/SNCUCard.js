@@ -2,11 +2,55 @@ import React from 'react'
 import ClickButton from './ClickButton';
 // import Button from './Button'
 import VolunteerButton from './VolunteerButton'
+import emailjs from 'emailjs-com';
+import { send } from 'emailjs-com';
+import { useEffect, useState } from "react";
 
 export default function SNCUCard(props) {
+    // function sendEmail(e) {
+    //     e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
 
-    function handleSubmit(e) {
+    //     emailjs.sendForm('service_gz1tomd', 'template_0pe5c6y', e.target, 'ipcVlGm78dm-XGRbs')
+    //         .then((result) => {
+    //             window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+    //         }, (error) => {
+    //             console.log(error.text);
+    //         });
+    // }
+    const onSubmit = (e) => {
+        // e.preventDefault();
+        send(
+            'service_gz1tomd',
+            'template_0pe5c6y',
+            toSend,
+            'ipcVlGm78dm-XGRbs'
+        )
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            })
+            .catch((err) => {
+                console.log('FAILED...', err);
+            });
+    };
+    const [toSend, setToSend] = useState({
+        from_name: 'NeoLink',
+        to_name: 'Medstar SNCU',
+        message: 'Hi! You have a new referral request',
+        reply_to: 'nehalgupta8501@gmail.com',
+    });
+    const handleChange = (e) => {
+        setToSend({ ...toSend, [e.target.name]: e.target.value });
+    };
+    const handleSubmit = (e) => {
         e.preventDefault();
+        try {
+            onSubmit();
+            console.log("Sent email");
+        } catch(e) {
+            console.log(e);
+        }
+       
+       
         var healthcareadminemail = props.healthcareAdminemail;
         var sncuadminemail = props.email;
         var healthcarename = props.healthcareOrgname;
@@ -43,7 +87,7 @@ export default function SNCUCard(props) {
                     alert("Error in sending request");
                 }
             });
-    }
+    };
     return (
         <div className='SNCUCard'>
             <div>
@@ -74,10 +118,10 @@ export default function SNCUCard(props) {
             </div>
             <div>
                 {/* <VolunteerButton type="button" href="/register-healthcare" text="SEND REQUEST" /> */}
-                <button onClick={handleSubmit} className='SNCUCardButton'>SEND REQUEST</button>
-                {/* <ClickButton onClick={handleSubmit} text="SEND REQUEST"></ClickButton> */}
+                {/* <button onClick={handleSubmit} className='SNCUCardButton'>SEND REQUEST</button> */}
+                <ClickButton handleSubmit={handleSubmit} text="SEND REQUEST"></ClickButton>
             </div>
-            
+
         </div>
     )
 }

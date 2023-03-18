@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useReducer, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import SNCUCard from "../components/SNCUCard";
+import NavbarHealthcare from "../components/NavbarHealthcare";
 
 export default function SearchSNCUResults() {
     const location = useLocation();
@@ -18,11 +19,11 @@ export default function SearchSNCUResults() {
         var specializationsLength = specializationsArr.length;
         for (let j = 0; j < specializationsLength - 1; j++) {
             specializationsString += specializationsArr[j];
-            if (j != specializationsLength - 2) {
+            if (j !== specializationsLength - 2) {
                 specializationsString += ", ";
             }
         }
-        if (specializationsLength != 1) {
+        if (specializationsLength !== 1) {
             specializationsString += " and " + specializationsArr[specializationsLength - 1] + ".";
         } else {
             specializationsString = specializationsArr[0] + ".";
@@ -30,16 +31,27 @@ export default function SearchSNCUResults() {
         return specializationsString;
     }
 
-    return (
-        <div>
-            <h1>Hello!</h1>
-            {data.map(({ orgname, city, specializationsArr, admincontact, adminemail, address, beds }) =>
-                <SNCUCard name={orgname} city={city} specializations={formatSpecializations(specializationsArr)} phone={admincontact}
-                    email={adminemail} address={address} beds={beds} healthcareAdminemail={healthcareAdminemail} healthcareOrgname={healthcareOrgname} />
+    if (data.length != 0) {
+        return (
+            <div>
+                <NavbarHealthcare/>
+                <h1 className="search-SNCU-results--title">Recommended SNCUs</h1>
+                {data.map(({ orgname, city, specializationsArr, admincontact, adminemail, address, beds }) =>
+                    <SNCUCard name={orgname} city={city} specializations={formatSpecializations(specializationsArr)} phone={admincontact}
+                        email={adminemail} address={address} beds={beds} healthcareAdminemail={healthcareAdminemail} healthcareOrgname={healthcareOrgname} />
 
-            )}
-        </div>
-    );
+                )}
+            </div>
+        );
+    } else {
+        return (
+            <div>
+                <NavbarHealthcare/>
+                <h1 className="search-SNCU-results--title">Recommended SNCUs</h1>
+                <p className="search-SNCU-results--message">Sorry, we could not find any SNCUs at the moment.</p>
+            </div>
+        );
+    }
 
     // return (
     //     <div>
