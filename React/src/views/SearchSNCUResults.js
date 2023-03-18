@@ -18,11 +18,11 @@ export default function SearchSNCUResults() {
         var specializationsLength = specializationsArr.length;
         for (let j = 0; j < specializationsLength - 1; j++) {
             specializationsString += specializationsArr[j];
-            if (j != specializationsLength - 2) {
+            if (j !== specializationsLength - 2) {
                 specializationsString += ", ";
             }
         }
-        if (specializationsLength != 1) {
+        if (specializationsLength !== 1) {
             specializationsString += " and " + specializationsArr[specializationsLength - 1] + ".";
         } else {
             specializationsString = specializationsArr[0] + ".";
