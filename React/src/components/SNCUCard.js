@@ -37,7 +37,7 @@ export default function SNCUCard(props) {
                     // window.localStorage.setItem("token", data.data);
                     // // window.localStorage.setItem("loggedIn", true);
 
-                    // window.location.href = "search-for-SNCU";
+                    window.location.href = "referral-requests";
                 } else {
                     alert("Error in sending request");
                 }

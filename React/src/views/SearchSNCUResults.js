@@ -30,13 +30,23 @@ export default function SearchSNCUResults() {
         return specializationsString;
     }
 
-    return data.map((el) => {
-        return (
-            <div>
-                <SNCUCard name={el.orgname} city={el.city} specializations={formatSpecializations(el.specializationsArr)} phone={el.admincontact}
-                    email={el.adminemail} address={el.address} beds={el.beds} healthcareAdminemail={healthcareAdminemail} healthcareOrgname={healthcareOrgname} />
-            </div>
-        )
-    });
+    return (
+        data.map((el) => {
+            return (
+                <div>
+                    <SNCUCard name={el.orgname} city={el.city} specializations={formatSpecializations(el.specializationsArr)} phone={el.admincontact}
+                        email={el.adminemail} address={el.address} beds={el.beds} healthcareAdminemail={healthcareAdminemail} healthcareOrgname={healthcareOrgname} />
+                </div>
+            )
+        })
+        
+    );
+
+    // return (
+    //     <div>
+    //         <h1>Title</h1>
+    //         cards
+    //     </div>
+    // )
 
 }
