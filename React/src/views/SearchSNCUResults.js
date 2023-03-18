@@ -31,15 +31,14 @@ export default function SearchSNCUResults() {
     }
 
     return (
-        data.map((el) => {
-            return (
-                <div>
-                    <SNCUCard name={el.orgname} city={el.city} specializations={formatSpecializations(el.specializationsArr)} phone={el.admincontact}
-                        email={el.adminemail} address={el.address} beds={el.beds} healthcareAdminemail={healthcareAdminemail} healthcareOrgname={healthcareOrgname} />
-                </div>
-            )
-        })
-        
+        <div>
+            <h1>Hello!</h1>
+            {data.map(({ orgname, city, specializationsArr, admincontact, adminemail, address, beds }) =>
+                <SNCUCard name={orgname} city={city} specializations={formatSpecializations(specializationsArr)} phone={admincontact}
+                    email={adminemail} address={address} beds={beds} healthcareAdminemail={healthcareAdminemail} healthcareOrgname={healthcareOrgname} />
+
+            )}
+        </div>
     );
 
     // return (
