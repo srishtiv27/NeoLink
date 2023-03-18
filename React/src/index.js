@@ -15,7 +15,7 @@ import LoginSNCU from './views/LoginSNCU';
 import SearchSNCUResults from './views/SearchSNCUResults';
 import About from './views/About.js';
 import ReferralRequests from './views/ReferralRequests';
-
+import Dashboard from './views/Dashboard';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -69,11 +69,15 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About/>,
-  }, 
+  },
   {
     path: "/referral-requests",
     element: <ReferralRequests/>,
-  }
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard/>,
+  },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
