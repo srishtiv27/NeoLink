@@ -5,6 +5,8 @@ import { CCard, CCardBody, CCol, CRow } from "@coreui/react";
 import logo from "../images/neolink-logo.png";
 import medstarlogo from "../images/medstar-logo.png";
 import NavbarHealthcare from "../components/NavbarHealthcare";
+import ClickButton from "../components/ClickButton";
+
 export default function Dashboard() {
     return (
         <div className="dashboard">
@@ -62,7 +64,11 @@ export default function Dashboard() {
                     {/* emergency alerts */}
                     <div>
                         <div className="emergency--alert-card">
-                        <img src={medstarlogo} className="medstar--icon" alt="logo" />
+                            <div className="emergency--button-image">
+                                {/* <VolunteerButton text="REFERRAL REQUESTS"></VolunteerButton> */}
+                                <ClickButton text="REFERRAL REQUESTS"></ClickButton>
+                                <img src={medstarlogo} className="medstar--icon" alt="logo" />
+                            </div>
                             <div className="emergency--info-align">
                                 <p className="emergency--title">Today's Updates at Medstar</p>
                                 <br />

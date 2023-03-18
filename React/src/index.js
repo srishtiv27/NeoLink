@@ -13,7 +13,8 @@ import LoginRegister from './views/LoginRegister';
 import RegisterSNCU from './views/RegisterSNCU';
 import LoginSNCU from './views/LoginSNCU';
 import SearchSNCUResults from './views/SearchSNCUResults';
-import About from './views/About.js'
+import About from './views/About.js';
+import ReferralRequests from './views/ReferralRequests';
 import Dashboard from './views/Dashboard';
 import {
   createBrowserRouter,
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About/>,
+  },
+  {
+    path: "/referral-requests",
+    element: <ReferralRequests/>,
   },
   {
     path: "/dashboard",
