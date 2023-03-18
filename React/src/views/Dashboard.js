@@ -59,7 +59,7 @@ export default function Dashboard() {
             </div> */}
             <div className="dashboard--main-content">
                 <NavbarHealthcare />
-                <h1 className="dashboard--title">Hi, Rainbow Children SNCU!</h1>
+                <h1 className="dashboard--title">Hi, Primus SNCU!</h1>
                 <div className="dashboard--cards">
                     <div className="header--card">
                         <div className="header--icon">
@@ -108,7 +108,7 @@ export default function Dashboard() {
                                 <img src={medstarlogo} className="medstar--icon" alt="logo" />
                             </div>
                             <div className="emergency--info-align">
-                                <p className="emergency--title">Today's Updates at Rainbow Children SNCU</p>
+                                <p className="emergency--title">Today's Updates at Primus SNCU</p>
                                 <br />
                                 <div className="emergency--alert-box">
                                     <p>
