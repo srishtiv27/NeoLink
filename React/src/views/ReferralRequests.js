@@ -6,14 +6,22 @@ import NavbarHealthcare from '../components/NavbarHealthcare';
 export default function ReferralRequests() {
     const location = useLocation();
     var data = location.state.data;
-
+    var emailUsed = [];
+    var uniqueData = [];
+    for (let i = 0; i < data.length; i++) {
+        if (!emailUsed.includes(data[i].healthcareadminemail)) {
+            uniqueData.push(data[i]);
+            emailUsed.push(data[i].healthcareadminemail);
+        }
+    }
+ 
     if (data.length != 0) {
         return (
             <div>
                 <NavbarHealthcare />
                 <h1 className="search-SNCU-results--title">Referral Requests</h1>
                 {
-                    data.map(({ healthcarename, healthcareadminemail }) =>
+                    uniqueData.map(({ healthcarename, healthcareadminemail }) =>
                         <ReferralRequestsCard healthcarename={healthcarename}
                             healthcareadminemail={healthcareadminemail} />
                     )
