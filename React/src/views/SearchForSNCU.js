@@ -45,6 +45,7 @@ export default function SearchForSNCU() {
 
     var handleChange = (selected) => {
         setoptionSelected(selected);
+        setspecializations(selected);
     };
 
     const handleSubmit = (e) => {
@@ -67,7 +68,7 @@ export default function SearchForSNCU() {
             .then((data) => {
                 var resultData = data.data;
                 console.log("handle submit 2");
-                alert("Successful");
+                // alert("Successful");
                
                 navigate("/search-sncu-results", {state: {data: resultData}})
                 // window.localStorage.setItem("loggedIn", true);
