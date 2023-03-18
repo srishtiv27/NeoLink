@@ -9,7 +9,7 @@ export default function NavbarHealthcare() {
             <h3 className="nav--item"> <a style={{textDecoration: 'none', color: 'white'}} href="/neonatal-care">Neonatal Care</a></h3>
             <h3 className="nav--item"> <a style={{textDecoration: 'none', color: 'white'}} href="/volunteer">Become a volunteer</a></h3>
             <h3 className="nav--item">About Us</h3>
-            <h3 className="nav--item"> <a style={{textDecoration: 'none', color: 'white'}} href="/login-register">Profile</a></h3>
+            <h3 className="nav--item"> <a style={{textDecoration: 'none', color: 'white'}} href="/login-register">Logout</a></h3>
         </nav>
     )
 }
