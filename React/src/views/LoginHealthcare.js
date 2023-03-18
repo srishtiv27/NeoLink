@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import Navbar from "../components/Navbar";
 
 export default function LoginHealthcare() {
+    // const [orgname, setorgname] = useState("");
     const [adminemail, setadminemail] = useState("");
     const [password, setpassword] = useState("");
 
@@ -28,7 +29,9 @@ export default function LoginHealthcare() {
                 console.log(data, "userRegister");
                 if (data.status == "ok") {
                     alert("Login successful");
-                    window.localStorage.setItem("token", data.data);
+                    window.localStorage.setItem("healthcareOrgname", data.data);
+                    window.localStorage.setItem("healthcareAdminemail", adminemail);
+                    // window.localStorage.setItem("token", data.data);
                     // window.localStorage.setItem("loggedIn", true);
 
                     window.location.href = "search-for-SNCU";

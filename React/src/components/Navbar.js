@@ -10,7 +10,6 @@ export default function Navbar() {
             <h3 className="nav--item"> <a style={{textDecoration: 'none', color: 'white'}} href="/volunteer">Become a volunteer</a></h3>
             <h3 className="nav--item"> <a style={{textDecoration: 'none', color: 'white'}} href="/about">About Us</a></h3>
             <h3 className="nav--item"> <a style={{textDecoration: 'none', color: 'white'}} href="/login-register">Login/Register</a></h3>
-            <h3 className="nav--item"> <a style={{textDecoration: 'none', color: 'white'}} href="/dashboard">Dashboard</a></h3>
         </nav>
     )
 }

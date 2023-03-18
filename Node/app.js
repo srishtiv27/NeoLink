@@ -24,6 +24,9 @@ const User = mongoose.model("HealthcareDetails");
 require("./models/sncuDetails");
 const UserSNCU = mongoose.model("SNCUDetails");
 
+require("./models/requestDetails");
+const UserRequestDetails = mongoose.model("RequestDetails");
+
 app.post("/register-healthcare", async (req, res) => {
     const { adminname, admincontact, adminemail, orgname, address, city, state, pincode, password, confirmpassword } = req.body;
 
@@ -75,8 +78,9 @@ app.post("/login-healthcare", async (req, res) => {
             expiresIn: "150m",
         });
 
+
         if (res.status(201)) {
-            return res.json({ status: "ok", data: token });
+            return res.json({ status: "ok", data: user.orgname});
         } else {
             return res.json({ error: "error" });
         }
@@ -86,6 +90,7 @@ app.post("/login-healthcare", async (req, res) => {
 
 app.post("/healthcare-data", async (req, res) => {
     const { token } = req.body;
+    
     try {
         console.log(token);
         const user = jwt.verify(token, JWT_SECRET, (err, res) => {
@@ -184,4 +189,17 @@ app.post("/search-sncu", async (req, res) => {
         res.send({ status: "error", error: "errormessage" });
     }
     
+});
+
+app.post("/request-details", async (req, res) => {
+    const { healthcareadminemail, sncuadminemail, healthcarename, sncuname} = req.body;
+    console.log(healthcareadminemail, sncuadminemail, healthcarename, sncuname);
+    try {
+        await UserRequestDetails.create({
+            healthcareadminemail, sncuadminemail, healthcarename, sncuname
+        });
+        res.send({ status: "ok", error: "Error 1"});
+    } catch (error) {
+        res.send({ status: "error", error: "Error 2"});
+    }
 });

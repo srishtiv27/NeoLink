@@ -4,7 +4,7 @@ import "@coreui/coreui/dist/css/coreui.min.css";
 import { CCard, CCardBody, CCol, CRow } from "@coreui/react";
 import logo from "../images/neolink-logo.png";
 import medstarlogo from "../images/medstar-logo.png";
-
+import NavbarHealthcare from "../components/NavbarHealthcare";
 export default function Dashboard() {
     return (
         <div className="dashboard">
@@ -18,7 +18,7 @@ export default function Dashboard() {
                 </div>
             </div> */}
             <div className="dashboard--main-content">
-                <Navbar/>
+                <NavbarHealthcare/>
                 <h1 className="dashboard--title">Hi, Medstar SNCU!</h1>
                 <div className="dashboard--cards">
                     <div className="header--card">

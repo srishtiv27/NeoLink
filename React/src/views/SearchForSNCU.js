@@ -4,8 +4,10 @@ import Button from "../components/Button";
 import SNCUCard from "../components/SNCUCard";
 import { default as ReactSelect } from "react-select";
 import { components } from "react-select";
+import { useNavigate } from "react-router-dom";
 
 export default function SearchForSNCU() {
+    const navigate = useNavigate();
     const [location, setlocation] = useState("");
     const [transport, settransport] = useState("");
     const [severity, setseverity] = useState("");
@@ -13,14 +15,9 @@ export default function SearchForSNCU() {
     const [maxage, setmaxage] = useState("");
     const [specializations, setspecializations] = useState("");
     const [optionSelected, setoptionSelected] = useState(null);
-
-    const [resultOrgName, setresultOrgName] = useState("");
-    const [resultCity, setresultCity] = useState("");
-    const [resultSpecializations, setresultSpecializations] = useState("");
-    const [resultContact, setresultContact] = useState("");
-    const [resultAddress, setresultAddress] = useState("");
-    const [resultEmail, setresultEmail] = useState("");
-    const [resultBeds, setresultBeds] = useState("");
+    var healthcareOrgname = window.localStorage.getItem("healthcareOrgname");
+    var healthcareAdminemail = window.localStorage.getItem("healthcareAdminemail");
+    // console.log(healthcareOrgname);
 
     const Option = (props) => {
         return (
@@ -56,7 +53,7 @@ export default function SearchForSNCU() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(location, transport, severity, beds, maxage, specializations );
+        console.log(location, transport, severity, beds, maxage, specializations);
         console.log("handle submit");
         fetch("http://localhost:3001/search-sncu", {
             method: "POST",
@@ -72,52 +69,18 @@ export default function SearchForSNCU() {
         })
             .then((res) => res.json())
             .then((data) => {
-                var resultOrgNameData = [];
-                var resultCityData = [];
-                var resultSpecializationsData = [];
-                var resultContactData = [];
-                var resultAddressData = [];
-                var resultEmailData = [];
-                var resultBedsData = [];
-                for (let i = 0; i < data.data.length; i++) {
-                    resultOrgNameData.push(data.data[i].orgname);
-                    resultCityData.push(data.data[i].city);
-                    resultContactData.push(data.data[i].admincontact);
-                    resultAddressData.push(data.data[i].address);
-                    resultEmailData.push(data.data[i].adminemail);
-                    resultBedsData.push(data.data[i].beds);
-                    
-                    var specializationsString = "";
-                    var specializationsLength = data.data[i].specializationsArr.length;
-                    console.log("Hello: " + specializationsLength);
-                    for (let j = 0; j <  specializationsLength - 1; j++) {
-                        specializationsString += data.data[i].specializationsArr[j];
-                        if (j != specializationsLength - 2) {
-                            specializationsString += ", ";
-                        }
-                    }
-                    if (specializationsLength != 1) {
-                        specializationsString += " and " + data.data[i].specializationsArr[specializationsLength - 1] + ".";
-                    } else {
-                        specializationsString = data.data[i].specializationsArr[0] + ".";
-                    }
-                    
-                    resultSpecializationsData.push(specializationsString);
-                }
-
-                // console.log(resultOrgName[0]);
-                setresultOrgName(resultOrgNameData);
-                setresultCity(resultCityData);
-                setresultContact(resultContactData);
-                setresultAddress(resultAddressData);
-                setresultEmail(resultEmailData);
-                setresultBeds(resultBedsData);
-                setresultSpecializations(resultSpecializationsData);
-                // console.log(data.data[0], "userData");
+                var resultData = data.data;
                 console.log("handle submit 2");
-                alert("Successful");
+                // alert("Successful");
+                var d2 = "rosowlia";
+                navigate("/search-sncu-results", { state: { data: resultData, healthCareData: "rosowlia", healthcareOrgname: healthcareOrgname, healthcareAdminemail: healthcareAdminemail } });
+
+                // navigate("/search-sncu-results", {state: {resultData, "rosowlia"}});
+                // window.localStorage.setItem("loggedIn", true);
+                // window.localStorage.setItem("data", data.data);
+                // window.location.href = "search-sncu-results";
             });
-        };
+    };
 
     return (
         <main className="healthcare--main">
@@ -135,7 +98,7 @@ export default function SearchForSNCU() {
                                 className="search-for-SNCU--input"
                                 type="text"
                                 name="location"
-                                onChange={(e) => setlocation(e.target.value)} 
+                                onChange={(e) => setlocation(e.target.value)}
                             />
                         </div>
                         <div >
@@ -145,11 +108,11 @@ export default function SearchForSNCU() {
 
                             <label className="specialization--label">
                                 {" "}
-                                <input type="radio" name="transport" value = "yes" onChange={(e) => settransport(e.target.value)}/> Yes
+                                <input type="radio" name="transport" value="yes" onChange={(e) => settransport(e.target.value)} /> Yes
                             </label>
                             <label className="specialization--label">
                                 {" "}
-                                <input type="radio" name="transport" value = "no" onChange={(e) => settransport(e.target.value)}/> No
+                                <input type="radio" name="transport" value="no" onChange={(e) => settransport(e.target.value)} /> No
                             </label>
                         </div>
                         <div className="form-field">
@@ -164,7 +127,7 @@ export default function SearchForSNCU() {
                         </div>
                     </div>
                     <div>
-                    <div className="form-field">
+                        <div className="form-field">
                             <label className="search-for-SNCU--label">Beds Required</label>
                             <input
                                 className="search-for-SNCU--input"
@@ -187,7 +150,7 @@ export default function SearchForSNCU() {
                             <label className="specialization--label">Specialization(s) Required</label>
                             <ReactSelect
                                 className="specialization--input"
-                                name = "specializations"
+                                name="specializations"
                                 options={specializationsOptions}
                                 isMulti
                                 closeMenuOnSelect={false}
@@ -203,18 +166,9 @@ export default function SearchForSNCU() {
                     </div>
                 </div>
                 <div className="submit-button">
-                    <Button type="submit" text="SUBMIT" href="/search-sncu-results"/>
+                    <Button type="submit" text="SUBMIT" />
                 </div>
             </form>
-            <br />
-            <br />
-            <br />
-            {/* <div className="displaySNCUCards">
-                <SNCUCard name={resultOrgName[0]} city={resultCity[0]} specializations={resultSpecializations[0]} phone={resultContact[0]}
-                          email={resultEmail[0]} address={resultAddress[0]} beds={resultBeds[0]}/>
-                <SNCUCard name="Max Hospital SNCU" city="New Delhi" specializations="Cardiology and Pediatrics" phone="9780683681" email="nehal@email.com"
-                    address="A-22, Connaught Place" beds="10" />
-            </div> */}
         </main>
     );
 }

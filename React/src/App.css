@@ -536,6 +536,9 @@ form {
 /* SNCU Card */
 
 .SNCUCard {
+  margin-left: 28%;
+  margin-top: 30px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   text-align: center;

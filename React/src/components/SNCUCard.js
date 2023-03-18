@@ -1,7 +1,48 @@
 import React from 'react'
+// import Button from './Button'
 import VolunteerButton from './VolunteerButton'
 
 export default function SNCUCard(props) {
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        var healthcareadminemail = props.healthcareAdminemail;
+        var sncuadminemail = props.email;
+        var healthcarename = props.healthcareOrgname;
+        var sncuname = props.name;
+        // console.log("SNCU Name: ", props.name);
+        // console.log("SNCU Email: ", props.email);
+        // console.log("Healthcare Provider Name: ", props.healthcareOrgname);
+        // console.log("Healthcare Provider Email: ", props.healthcareAdminemail);
+        fetch("http://localhost:3001/request-details", {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+            body: JSON.stringify({
+                healthcareadminemail,
+                sncuadminemail,
+                healthcarename,
+                sncuname
+            }),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                // console.log(data, "userRegister");
+                if (data.status == "ok") {
+                    alert("Details entered successfully");
+                    // window.localStorage.setItem("token", data.data);
+                    // // window.localStorage.setItem("loggedIn", true);
+
+                    // window.location.href = "search-for-SNCU";
+                } else {
+                    alert("Error in submitting details");
+                }
+            });
+    }
     return (
         <div className='SNCUCard'>
             <div>
@@ -31,7 +72,8 @@ export default function SNCUCard(props) {
                 </div>
             </div>
             <div>
-                <VolunteerButton type="button" href="/register-healthcare" text="SEARCH FOR SNCU" />
+                {/* <VolunteerButton type="button" href="/register-healthcare" text="SEND REQUEST" /> */}
+                <button onClick={handleSubmit} className='SNCUCardButton'>SEND REQUEST</button>
             </div>
             
         </div>
