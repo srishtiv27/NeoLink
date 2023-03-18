@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 export default function Dashboard() {
    
     const location = useLocation();
-    var data = location.state.data;
+    // var data = location.state.data;
     var sncuadminemail = window.localStorage.getItem("adminemail");
     const navigate = useNavigate();
 
@@ -59,7 +59,7 @@ export default function Dashboard() {
             </div> */}
             <div className="dashboard--main-content">
                 <NavbarHealthcare />
-                <h1 className="dashboard--title">Hi, {data.orgname}!</h1>
+                <h1 className="dashboard--title">Hi, Rainbow Children SNCU!</h1>
                 <div className="dashboard--cards">
                     <div className="header--card">
                         <div className="header--icon">
@@ -70,7 +70,7 @@ export default function Dashboard() {
                         </div>
                         <div className="header--info-align">
                             <p className="header--card-name">Total patients</p>
-                            <p className="header--card-info">60</p>
+                            <p className="header--card-info">20</p>
                         </div>
                     </div>
                     <div className="header--card">
@@ -82,7 +82,7 @@ export default function Dashboard() {
                         </div>
                         <div className="header--info-align">
                             <p className="header--card-name">Staff count</p>
-                            <p className="header--card-info">{data.staff}</p>
+                            <p className="header--card-info">15</p>
                         </div>
                     </div>
                     <div className="header--card">
@@ -94,7 +94,7 @@ export default function Dashboard() {
                         </div>
                         <div className="header--info-align">
                             <p className="header--card-name">Beds Available</p>
-                            <p className="header--card-info">{data.beds}</p>
+                            <p className="header--card-info">10</p>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@ export default function Dashboard() {
                                 <img src={medstarlogo} className="medstar--icon" alt="logo" />
                             </div>
                             <div className="emergency--info-align">
-                                <p className="emergency--title">Today's Updates at {data.orgname}</p>
+                                <p className="emergency--title">Today's Updates at Rainbow Children SNCU</p>
                                 <br />
                                 <div className="emergency--alert-box">
                                     <p>
