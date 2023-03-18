@@ -6,9 +6,13 @@ import logo from "../images/neolink-logo.png";
 import medstarlogo from "../images/medstar-logo.png";
 import NavbarHealthcare from "../components/NavbarHealthcare";
 import ClickButton from "../components/ClickButton";
+import { useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
+   
+    const location = useLocation();
+    var data = location.state.data;
     var sncuadminemail = window.localStorage.getItem("adminemail");
     const navigate = useNavigate();
 
@@ -55,7 +59,7 @@ export default function Dashboard() {
             </div> */}
             <div className="dashboard--main-content">
                 <NavbarHealthcare />
-                <h1 className="dashboard--title">Hi, Medstar SNCU!</h1>
+                <h1 className="dashboard--title">Hi, {data.orgname}!</h1>
                 <div className="dashboard--cards">
                     <div className="header--card">
                         <div className="header--icon">
@@ -78,7 +82,7 @@ export default function Dashboard() {
                         </div>
                         <div className="header--info-align">
                             <p className="header--card-name">Staff count</p>
-                            <p className="header--card-info">25</p>
+                            <p className="header--card-info">{data.staff}</p>
                         </div>
                     </div>
                     <div className="header--card">
@@ -90,7 +94,7 @@ export default function Dashboard() {
                         </div>
                         <div className="header--info-align">
                             <p className="header--card-name">Beds Available</p>
-                            <p className="header--card-info">10</p>
+                            <p className="header--card-info">{data.beds}</p>
                         </div>
                     </div>
                 </div>
@@ -104,7 +108,7 @@ export default function Dashboard() {
                                 <img src={medstarlogo} className="medstar--icon" alt="logo" />
                             </div>
                             <div className="emergency--info-align">
-                                <p className="emergency--title">Today's Updates at Medstar</p>
+                                <p className="emergency--title">Today's Updates at {data.orgname}</p>
                                 <br />
                                 <div className="emergency--alert-box">
                                     <p>

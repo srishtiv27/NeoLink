@@ -159,7 +159,7 @@ app.post("/login-sncu", async (req, res) => {
         });
 
         if (res.status(201)) {
-            return res.json({ status: "ok", data: token });
+            return res.json({ status: "ok", data: user });
         } else {
             return res.json({ error: "error" });
         }
@@ -206,6 +206,8 @@ app.post("/request-details", async (req, res) => {
 
 app.post("/get-details", async (req, res) => {
     const {sncuadminemail} = req.body;
+    // const user = await UserSNCU.findOne({ adminemail: sncuadminemail});
+    // console.log(user.orgname);
     console.log(sncuadminemail);
     try {
         const result = await UserRequestDetails.find(
@@ -213,7 +215,7 @@ app.post("/get-details", async (req, res) => {
                 sncuadminemail: sncuadminemail
             }
         )
-        console.log(result)
+        // console.log(result)
         res.send({ status: "ok", data: result});
     } catch (error) {
         res.send({ status: "error", error: "Error"});

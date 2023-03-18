@@ -1,8 +1,10 @@
 import React, { Component, useState } from "react";
 import Button from "../components/Button";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginSNCU() {
+    const navigate = useNavigate();
     const [adminemail, setadminemail] = useState("");
     const [password, setpassword] = useState("");
 
@@ -27,11 +29,14 @@ export default function LoginSNCU() {
             .then((data) => {
                 console.log(data, "userRegister");
                 if (data.status == "ok") {
+                    // var beds = data.data.beds;
+                
                     alert("Login successful");
                     window.localStorage.setItem("token", data.data);
                     window.localStorage.setItem("adminemail", adminemail);
                     // window.localStorage.setItem("loggedIn", true);
-                    window.location.href = "dashboard";
+                    // window.location.href = "dashboard";
+                    navigate("/dashboard", { state: { data: data.data} });
                 } else {
                     alert("Invalid username/password");
                 }
