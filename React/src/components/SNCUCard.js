@@ -43,7 +43,14 @@ export default function SNCUCard(props) {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit();
+        try {
+            onSubmit();
+            console.log("Sent email");
+        } catch(e) {
+            console.log(e);
+        }
+       
+       
         var healthcareadminemail = props.healthcareAdminemail;
         var sncuadminemail = props.email;
         var healthcarename = props.healthcareOrgname;
@@ -75,7 +82,7 @@ export default function SNCUCard(props) {
                     // window.localStorage.setItem("token", data.data);
                     // // window.localStorage.setItem("loggedIn", true);
 
-                    // window.location.href = "search-for-SNCU";
+                    window.location.href = "referral-requests";
                 } else {
                     alert("Error in sending request");
                 }

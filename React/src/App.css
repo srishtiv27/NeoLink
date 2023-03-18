@@ -508,7 +508,6 @@ form {
 
 /* Login/Register */
 
-
 .login-register-content {
   display: flex;
   margin-top: 300px;
@@ -608,6 +607,7 @@ form {
 .margin-right {
   margin-right: 25px;
 }
+
 /* Referral Requests Card */
 .referral-requests-card {
   text-align: center;
@@ -813,4 +813,26 @@ form {
   font-family: 'Lato';
   color: black;
   font-weight: bold;
+}
+
+/* Search SNCU results page */
+
+.search-SNCU-results--title {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 62px;
+  color: black;
+  text-align: center;
+  margin-top: 130px;
+}
+
+.search-SNCU-results--message {
+  color: black;
+  text-align: center;
+  font-family: 'Lato';
+  font-style: normal;
+  font-size: 20px;
+  margin-top: 40px;
 }

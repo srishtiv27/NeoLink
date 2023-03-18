@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useReducer, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import SNCUCard from "../components/SNCUCard";
+import NavbarHealthcare from "../components/NavbarHealthcare";
 
 export default function SearchSNCUResults() {
     const location = useLocation();
@@ -30,13 +31,33 @@ export default function SearchSNCUResults() {
         return specializationsString;
     }
 
-    return data.map((el) => {
+    if (data.length != 0) {
         return (
             <div>
-                <SNCUCard name={el.orgname} city={el.city} specializations={formatSpecializations(el.specializationsArr)} phone={el.admincontact}
-                    email={el.adminemail} address={el.address} beds={el.beds} healthcareAdminemail={healthcareAdminemail} healthcareOrgname={healthcareOrgname} />
+                <NavbarHealthcare/>
+                <h1 className="search-SNCU-results--title">Recommended SNCUs</h1>
+                {data.map(({ orgname, city, specializationsArr, admincontact, adminemail, address, beds }) =>
+                    <SNCUCard name={orgname} city={city} specializations={formatSpecializations(specializationsArr)} phone={admincontact}
+                        email={adminemail} address={address} beds={beds} healthcareAdminemail={healthcareAdminemail} healthcareOrgname={healthcareOrgname} />
+
+                )}
             </div>
-        )
-    });
+        );
+    } else {
+        return (
+            <div>
+                <NavbarHealthcare/>
+                <h1 className="search-SNCU-results--title">Recommended SNCUs</h1>
+                <p className="search-SNCU-results--message">Sorry, we could not find any SNCUs at the moment.</p>
+            </div>
+        );
+    }
+
+    // return (
+    //     <div>
+    //         <h1>Title</h1>
+    //         cards
+    //     </div>
+    // )
 
 }
