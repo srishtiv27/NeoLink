@@ -576,6 +576,8 @@ form {
   margin: 20px 30px;
 }
 
+/* Search SNCU Dropdown */
+
 .specialization {
   display: flex;
 }
@@ -606,10 +608,14 @@ form {
 .margin-right {
   margin-right: 25px;
 }
+
+/* Dashboard */
+
 .dashboard--cards{
   display: flex;
   justify-content: space-evenly;
 }
+
 .dashboard--title{
   margin-top: 140px;
   margin-bottom: 20px;
@@ -618,6 +624,7 @@ form {
   color: black;
   font-weight: 600;
 }
+
 .header--card{
   display: flex;
   /* flex-direction: column; */
@@ -633,13 +640,16 @@ form {
   margin-top: 30px;
   /* margin-left: 30px;  */
 }
+
 .header--card-name{
   font-size: 20px;
   font-weight: normal;
 }
+
 .header--card-info{
   font-size: 40px;
 }
+
 .header--icon{
   height: 100px;
   width: 100px;
@@ -648,13 +658,16 @@ form {
   align-items: center;
   margin-top: 50px;
 }
+
 .header--icon-align{
   height: 120px;
   width: 120px;
 }
+
 .header--info-align{
   margin-top: 50px;
 }
+
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 200px; /* Set the width of the sidebar */
@@ -667,9 +680,11 @@ form {
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 }
+
 .sidenav--content{
   margin-top: 200px;
 }
+
 /* The navigation menu links */
 .sidenav a {
   padding: 6px 8px 6px 16px;
@@ -686,6 +701,7 @@ form {
 .sidenav a:hover {
   color: #f1f1f1;
 }
+
 .navbar--align{
   margin-left: 200px;
 }
@@ -704,17 +720,21 @@ form {
   margin-top: 30px;
   /* margin-left: 30px;  */
 }
+
 .emergency--alert{
   margin: 30px 30px 50px 90px;
 }
+
 .emergency--info-align{
   margin-top: 30px;
   margin-left: 40px;
 }
+
 .emergency--title{
   font-size: 30px;
   font-weight: 650;
 }
+
 .emergency--alert-box{
   width: 700px;
   background-color: #f8f8e5;
@@ -724,6 +744,41 @@ form {
   border-radius: 15px;
   /* padding: 3px; */
 }
+
 .medstar--icon{
-  height: 400px;
+  height: 200px;
+  width: 150px;
+  margin-top: 40px;
+  margin-left: 45px;
+}
+
+.emergency--button-image {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+/* Click Button */
+
+.ClickButton {
+  height: 45px;
+  width: 250px;
+  background-color: #282c34;
+  border-radius: 30px;
+  border-color: transparent;
+  font-family: 'Lato';
+  color: white;
+  font-weight: bold;
+}
+
+.ClickButton:hover {
+  height: 45px;
+  width: 250px;
+  background-color: #D0EAFE;
+  border-radius: 30px;
+  border-color: #282c34;
+  font-family: 'Lato';
+  color: black;
+  font-weight: bold;
 }
