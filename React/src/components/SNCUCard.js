@@ -75,7 +75,7 @@ export default function SNCUCard(props) {
             <div>
                 {/* <VolunteerButton type="button" href="/register-healthcare" text="SEND REQUEST" /> */}
                 {/* <button onClick={handleSubmit} className='SNCUCardButton'>SEND REQUEST</button> */}
-                <ClickButton text="SEND REQUEST"></ClickButton>
+                <ClickButton handleSubmit={handleSubmit} text="SEND REQUEST"></ClickButton>
             </div>
             
         </div>

@@ -1,7 +1,5 @@
 import React from 'react'
 
 export default function ClickButton(props) {
-    return (
-        <button className='ClickButton'>{props.text}</button>
-    )
+    return <button onClick={props.handleSubmit} className='ClickButton'>{props.text}</button>
 }
