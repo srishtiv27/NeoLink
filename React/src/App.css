@@ -603,3 +603,124 @@ form {
 .margin-right {
   margin-right: 25px;
 }
+.dashboard--cards{
+  display: flex;
+  justify-content: space-evenly;
+}
+.dashboard--title{
+  margin-top: 140px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  font-family: 'Lato';
+  color: black;
+  font-weight: 600;
+}
+.header--card{
+  display: flex;
+  /* flex-direction: column; */
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+  height: 200px;
+  width: 350px;
+  border-radius: 30px;
+  background-color: #D0EAFE;
+  font-family: 'Lato';
+  color: black;
+  margin-top: 30px;
+  /* margin-left: 30px;  */
+}
+.header--card-name{
+  font-size: 20px;
+  font-weight: normal;
+}
+.header--card-info{
+  font-size: 40px;
+}
+.header--icon{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.header--icon-align{
+  height: 120px;
+  width: 120px;
+}
+.header--info-align{
+  margin-top: 50px;
+}
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #f5f5da; 
+  opacity: 70%;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+.sidenav--content{
+  margin-top: 200px;
+}
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  margin-top: 20px;
+  font-family: 'Lato';
+  text-align: center;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.navbar--align{
+  margin-left: 200px;
+}
+
+.emergency--alert-card{
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: space-evenly; */
+  text-align: left;
+  height: 350px;
+  width: 1250px;
+  border-radius: 30px;
+  background-color: #fafafa;
+  font-family: 'Lato';
+  color: black;
+  margin-top: 30px;
+  /* margin-left: 30px;  */
+}
+.emergency--alert{
+  margin: 30px 30px 50px 90px;
+}
+.emergency--info-align{
+  margin-top: 30px;
+  margin-left: 40px;
+}
+.emergency--title{
+  font-size: 30px;
+  font-weight: 650;
+}
+.emergency--alert-box{
+  width: 700px;
+  background-color: #f8f8e5;
+  height: 50px;
+  padding-left: 20px;
+  padding-top: 15px;
+  border-radius: 15px;
+  /* padding: 3px; */
+}
+.medstar--icon{
+  height: 400px;
+}

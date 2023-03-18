@@ -14,7 +14,7 @@ import RegisterSNCU from './views/RegisterSNCU';
 import LoginSNCU from './views/LoginSNCU';
 import SearchSNCUResults from './views/SearchSNCUResults';
 import About from './views/About.js'
-
+import Dashboard from './views/Dashboard';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -68,6 +68,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About/>,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard/>,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
