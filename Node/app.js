@@ -203,3 +203,18 @@ app.post("/request-details", async (req, res) => {
         res.send({ status: "error", error: "Error 2"});
     }
 });
+
+app.post("/get-details", async (req, res) => {
+    const {sncuadminemail} = req.body;
+    console.log(sncuadminemail);
+    try {
+        const result = await UserRequestDetails.find(
+            {
+                sncuadminemail: sncuadminemail
+            }
+        )
+        res.send({ status: "ok", data: result});
+    } catch (error) {
+        res.send({ status: "error", error: "Error"});
+    }
+});

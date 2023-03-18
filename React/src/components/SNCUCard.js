@@ -34,13 +34,13 @@ export default function SNCUCard(props) {
             .then((data) => {
                 // console.log(data, "userRegister");
                 if (data.status == "ok") {
-                    alert("Details entered successfully");
+                    alert("Request Sent");
                     // window.localStorage.setItem("token", data.data);
                     // // window.localStorage.setItem("loggedIn", true);
 
                     // window.location.href = "search-for-SNCU";
                 } else {
-                    alert("Error in submitting details");
+                    alert("Error in sending request");
                 }
             });
     }

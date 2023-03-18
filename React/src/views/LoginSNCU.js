@@ -31,7 +31,7 @@ export default function LoginSNCU() {
                     window.localStorage.setItem("token", data.data);
                     // window.localStorage.setItem("loggedIn", true);
 
-                    window.location.href = "search-for-SNCU";
+                    window.location.href = "referral-requests";
                 } else {
                     alert("Invalid username/password");
                 }
