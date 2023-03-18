@@ -53,11 +53,4 @@ export default function SearchSNCUResults() {
         );
     }
 
-    // return (
-    //     <div>
-    //         <h1>Title</h1>
-    //         cards
-    //     </div>
-    // )
-
 }

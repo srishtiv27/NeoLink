@@ -82,7 +82,7 @@ export default function SNCUCard(props) {
                     // window.localStorage.setItem("token", data.data);
                     // // window.localStorage.setItem("loggedIn", true);
 
-                    window.location.href = "referral-requests";
+                    // window.location.href = "";
                 } else {
                     alert("Error in sending request");
                 }

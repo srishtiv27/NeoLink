@@ -610,12 +610,14 @@ form {
 
 /* Referral Requests Card */
 .referral-requests-card {
+  margin-left: 40%;
+  margin-top: 30px;
   text-align: center;
   font-family: 'Lato';
   color: black;
   background-color: #D0EAFE;
   width: 300px;
-  height: 150px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -632,8 +634,9 @@ form {
 
 .referral-requests-card--row {
   display: flex;
-  margin-left: 50px;
-  margin-right: 40px;
+  justify-content: center;
+  /* margin-left: 50px;
+  margin-right: 40px; */
 }
 
 .referral-request-card--icon {
